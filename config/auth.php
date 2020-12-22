@@ -30,7 +30,11 @@ return [
         'admin-api' => [
             'driver' => 'token',
             'provider' => 'admins',
-        ]
+        ],
+        'super-admin' => [
+            'driver' => 'session',
+            'provider' => 'superadmins'
+        ],
     ],
 
     'providers' => [
@@ -42,7 +46,11 @@ return [
         'admins' => [
             'driver' => 'eloquent',
             'model' => Webkul\User\Models\Admin::class,
-        ]
+        ],
+        'superadmins' => [
+            'driver' => 'eloquent',
+            'model' => Webkul\SAASCustomizer\Models\Agent::class
+        ],
     ],
 
     'passwords' => [
@@ -54,6 +62,11 @@ return [
         'customers' => [
             'provider' => 'customers',
             'table' => 'customer_password_resets',
+            'expire' => 60,
+        ],
+        'superadmins' => [
+            'provider' => 'superadmins',
+            'table' => 'super_admin_password_resets',
             'expire' => 60,
         ],
     ],

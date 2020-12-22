@@ -48,8 +48,14 @@ class LoginController extends Controller
      */
     public function redirectToProvider($provider)
     {
+        $client_id = core()->getConfigData('customer.social_login.' . $provider . '.' . strtoupper($provider) . '_CLIENT_ID');
+        $redirect_uri = core()->getConfigData('customer.social_login.' . $provider . '.' . strtoupper($provider) . '_CALLBACK_URL');
+
         try {
-            return Socialite::driver($provider)->redirect();
+            return Socialite::driver($provider)->with([
+                'client_id' => $client_id ? $client_id : config('services.'.$provider.'.client_id'),
+                'redirect_uri' => $redirect_uri ? $redirect_uri : config('services.'.$provider.'.redirect')
+            ])->redirect();
         } catch (\Exception $e) {
             session()->flash('error', $e->getMessage());
 
@@ -65,6 +71,14 @@ class LoginController extends Controller
      */
     public function handleProviderCallback($provider)
     {
+        $client_id = core()->getConfigData('customer.social_login.' . $provider . '.' . strtoupper($provider) . '_CLIENT_ID');
+        $client_secret = core()->getConfigData('customer.social_login.' . $provider . '.' . strtoupper($provider) . '_CLIENT_SECRET');
+        $redirect = core()->getConfigData('customer.social_login.' . $provider . '.' . strtoupper($provider) . '_CALLBACK_URL');
+
+        config(['services.'.$provider.'.client_id' => $client_id ? $client_id : config('services.'.$provider.'.client_id')]);
+        config(['services.'.$provider.'.client_secret' => $client_secret ? $client_secret : config('services.'.$provider.'.client_secret')]);
+        config(['services.'.$provider.'.redirect' => $redirect ? $redirect : config('services.'.$provider.'.redirect')]);
+
         try {
             $user = Socialite::driver($provider)->user();
         } catch (\Exception $e) {

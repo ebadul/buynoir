@@ -1,6 +1,12 @@
 <?php
 
 return [
+    'sellnoir'       => [
+        'key'   => 'sellnoir',
+        'name'  => 'Sellnoir',
+        'class' => 'Webkul\Product\Type\Simple',
+        'sort'  => 1,
+    ],
     'simple'       => [
         'key'   => 'simple',
         'name'  => 'Simple',
