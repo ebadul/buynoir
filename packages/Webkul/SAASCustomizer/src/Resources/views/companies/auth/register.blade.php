@@ -9,6 +9,7 @@
 @endsection
 
 @section('content-wrapper')
+
     <seller-registration></seller-registration>
 
     @push('scripts')

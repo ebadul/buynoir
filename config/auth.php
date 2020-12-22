@@ -31,10 +31,10 @@ return [
             'driver' => 'token',
             'provider' => 'admins',
         ],
-	'super-admin' => [
-        'driver' => 'session',
-        'provider' => 'superadmins'
-    	],
+        'super-admin' => [
+            'driver' => 'session',
+            'provider' => 'superadmins'
+        ],
     ],
 
     'providers' => [
@@ -47,10 +47,10 @@ return [
             'driver' => 'eloquent',
             'model' => Webkul\User\Models\Admin::class,
         ],
-	'superadmins' => [
-        'driver' => 'eloquent',
-        'model' => Webkul\SAASCustomizer\Models\Agent::class
-    	],
+        'superadmins' => [
+            'driver' => 'eloquent',
+            'model' => Webkul\SAASCustomizer\Models\Agent::class
+        ],
     ],
 
     'passwords' => [
@@ -64,10 +64,10 @@ return [
             'table' => 'customer_password_resets',
             'expire' => 60,
         ],
-	'superadmins' => [
-        	'provider' => 'superadmins',
-        	'table' => 'super_admin_password_resets',
-        	'expire' => 60,
-    	],
+        'superadmins' => [
+            'provider' => 'superadmins',
+            'table' => 'super_admin_password_resets',
+            'expire' => 60,
+        ],
     ],
 ];

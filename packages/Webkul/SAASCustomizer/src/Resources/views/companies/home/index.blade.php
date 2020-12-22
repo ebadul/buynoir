@@ -40,6 +40,7 @@
 @endsection
 
 @section('content-wrapper')
+
     {!! view_render_event('bagisto.saas.companies.home.content.before') !!}
 
     @if ( $channel ) 
