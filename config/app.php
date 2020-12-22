@@ -281,7 +281,9 @@ return [
         Webkul\BookingProduct\Providers\BookingProductServiceProvider::class,
         Webkul\SocialLogin\Providers\SocialLoginServiceProvider::class,
         Webkul\DebugBar\Providers\DebugBarServiceProvider::class,
-    ],
+	Webkul\SAASCustomizer\Providers\SAASCustomizerServiceProvider::class
+	 
+   ],
 
     /*
     |--------------------------------------------------------------------------
@@ -340,5 +342,6 @@ return [
         'Concord' => Konekt\Concord\Facades\Concord::class,
         'Helper'  => Konekt\Concord\Facades\Helper::class,
         'Debugbar' => Barryvdh\Debugbar\Facade::class,
-    ],
+	'Company' => Webkul\SAASCustomizer\Facades\Company::class  
+  ],
 ];
