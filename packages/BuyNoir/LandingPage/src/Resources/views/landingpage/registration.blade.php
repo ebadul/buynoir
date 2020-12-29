@@ -202,7 +202,7 @@
                                                   </div>
 
                                                   <div class="control-group mt-4" :class="[errors.has('step-three.name') ? 'has-error' : '']">
-                                                      <label for="elsebusiness" class="required">{{ __('saas::app.tenant.registration.else-business') }}</label>
+                                                      <label for="elsebusiness" class="">{{ __('saas::app.tenant.registration.else-business') }}</label>
 
                                                       <div class="row mt-3">
                                                         <div class="col-md-4">
