@@ -33,10 +33,11 @@
 
           </ul>
           <div class="nav_account btn_demo3">
-            <button type="button" data-toggle="modal" data-target="#mdllLogin"
-              class="btn btn_sm_primary opacity-1 sweep_letter scale sweep_top rounded-8">
+            <button type="button" class="btn btn_sm_primary opacity-1 sweep_letter scale sweep_top rounded-8">
               <div class="inside_item">
-                <span data-hover="Hey!">Sign In</span>
+                 <a href="{{route('company.create.index')}}">
+                  <span data-hover="Hey!">Sign Up</span>
+                </a>
               </div>
             </button>
           </div>

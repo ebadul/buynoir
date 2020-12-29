@@ -57,7 +57,7 @@
 
             <flash-wrapper ref='flashes'></flash-wrapper>
 
-            @if( request()->is('company/home') )
+            @if( request()->is('/') )
             @include ('landingpage_view::landingpage.nav-top')
             @endif
 
@@ -76,7 +76,7 @@
             
             {!! view_render_event('bagisto.saas.companies.layout.footer.before') !!}
 
-            @if( request()->is('company/home') )
+            @if( request()->is('/') )
                 @include('landingpage_view::landingpage.footer')
             @endif
             

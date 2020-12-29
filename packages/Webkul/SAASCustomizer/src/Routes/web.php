@@ -1,5 +1,16 @@
 <?php
 
+
+Route::any('/', 'BuyNoir\LandingPage\Http\Controllers\LandingPageController@index')->defaults('_config', [
+    'view' => 'landingpage_view::landingpage.index'
+])->name('saas.home.index');
+
+    //    Route::any('/', 'Webkul\SAASCustomizer\Http\Controllers\Company\HomeController@index')->defaults('_config', [
+     //        'view' => 'saas::companies.home.index'
+     //   ])->name('landingpage.home.index');
+
+
+
 Route::group(['middleware' => ['web', 'super-locale']], function () {
     
     Route::prefix('super')->group(function() {
@@ -213,17 +224,19 @@ Route::group(['middleware' => ['web', 'super-locale']], function () {
     });
 });
 
+
+
 Route::group(['middleware' => ['web', 'company-locale']], function () {
     // company registration routes
     Route::prefix('company')->group(function() {
 
         //Store front home
-        // Route::get('/home', 'Webkul\SAASCustomizer\Http\Controllers\Company\HomeController@index')->defaults('_config', [
+        //Route::get('/home', 'Webkul\SAASCustomizer\Http\Controllers\Company\HomeController@index')->defaults('_config', [
         //     'view' => 'saas::companies.home.index'
-        // ])->name('saas.home.index');
-        Route::get('/home', 'BuyNoir\LandingPage\Http\Controllers\LandingPageController@index')->defaults('_config', [
-            'view' => 'landingpage_view::landingpage.index'
-        ])->name('saas.home.index');
+        //])->name('saas.home.index');
+        //Route::get('/home', 'BuyNoir\LandingPage\Http\Controllers\LandingPageController@index')->defaults('_config', [
+         //  'view' => 'landingpage_view::landingpage.index'
+        //])->name('saas.home.index');
 
         // Route::get('/landingpage', 'BuyNoir\LandingPage\Http\Controllers\LandingPageController@index')
         // ->defaults('_config', [

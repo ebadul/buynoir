@@ -1,4 +1,6 @@
 <?php
+
+
     Route::group(['middleware' => ['web', 'company-locale']], function () {
         
         Route::get('/', 'BuyNoir\LandingPage\Http\Controllers\LandingPageController@index')
