@@ -41,9 +41,7 @@ class ValidatesDomain
         $primaryServerName = config('app.url');
 
         $currentURL = $_SERVER['SERVER_NAME'];
-
         $params['domain'] = $currentURL;
-
         $validator = Validator::make($params, [
             'domain' => 'required|ip'
         ]);
@@ -73,6 +71,7 @@ class ValidatesDomain
         }
 
         if ($currentURL == $primaryServerNameWithoutProtocol) {
+	   
             if (request()->is('company/*') || request()->is('super/*')) {
                 return $next($request);
             } else {
