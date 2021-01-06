@@ -38,6 +38,12 @@
         <link rel="stylesheet" href="{{ asset('vendor/webkul/ui/assets/css/ui.css') }}">
         <link rel="stylesheet" href="{{ asset('vendor/webkul/saas/assets/css/tenant.css') }}">
 
+        
+         <!-- jquery -->
+         <script src="{{ asset('buynoir/landingpage/assets/js/jquery-3.5.0.js')}}" type="text/javascript"></script>
+         <!-- jquery-migrate -->
+         <script src="{{ asset('buynoir/landingpage/assets/js/jquery-migrate.min.js')}}" type="text/javascript"></script>
+         
         <!-- js for Brwoser -->
         <!--[if lt IE 9]>
             <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -119,10 +125,6 @@
 
     
 
-         <!-- jquery -->
-        <script src="{{ asset('buynoir/landingpage/assets/js/jquery-3.5.0.js')}}" type="text/javascript"></script>
-        <!-- jquery-migrate -->
-        <script src="{{ asset('buynoir/landingpage/assets/js/jquery-migrate.min.js')}}" type="text/javascript"></script>
         <!-- popper -->
         <script src="{{ asset('buynoir/landingpage/assets/js/popper.min.js')}}" type="text/javascript"></script>
         <!-- bootstrap -->

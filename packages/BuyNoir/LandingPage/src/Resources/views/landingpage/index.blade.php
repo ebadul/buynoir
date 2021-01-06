@@ -58,8 +58,8 @@
                   <div class="col-md-8 col-lg-5">
                     <div class="banner_title">
                       <div class="offer">
-                        <span>Beta</span>
-                        <span>Release</span>
+                        <span></span>
+                        <span></span>
                       </div>
                       <h1 class="c-white">
                         Made to help
@@ -231,7 +231,7 @@
                             <p>
                               No coding required. Simply choose the template that matches your style, add your branding and products and start selling your stuff. 
                             </p>
-                            <a href="#" class="btn btn_lg_primary margin-t-2 sweep_top sweep_letter rounded-12 border-1">
+                            <a href="{{route('company.create.index')}}" class="btn btn_lg_primary margin-t-2 sweep_top sweep_letter rounded-12 border-1">
                               <div class="inside_item">
                                 <span data-hover="Yes, Free!">Start Free!</span>
                               </div>
@@ -282,7 +282,7 @@
                             <p>
                               Take the leap and move to a platform made by black entrepenures for black entrepreneurs. We've made the features you need to grow your business with you in mind. We've also made it easy to move your stuff over from those other guys to BuyNoir.
                             </p>
-                            <a href="#" class="btn btn_lg_primary margin-t-2 sweep_top sweep_letter rounded-12 border-1">
+                            <a href="{{route("company.create.index")}}" class="btn btn_lg_primary margin-t-2 sweep_top sweep_letter rounded-12 border-1">
                               <div class="inside_item">
                                 <span data-hover="Yes, Free!">Start Free!</span>
                               </div>
@@ -333,7 +333,7 @@
                             <p>
                               ok, maybe we should have led with this. That's right! You earn it, you keep it! BuyNoir takes none of your sales earnings. Simply pay a monthly fee to keep your shop running and you keep 100% of the money you earned. 
                             </p>
-                            <a href="#" class="btn btn_lg_primary margin-t-2 sweep_top sweep_letter rounded-12 border-1">
+                            <a href="{{route("company.create.index")}}" class="btn btn_lg_primary margin-t-2 sweep_top sweep_letter rounded-12 border-1">
                               <div class="inside_item">
                                 <span data-hover="Yes, Free!">Start Free!</span>
                               </div>
@@ -364,7 +364,7 @@
                       </div>
                       <h2>Seamless integration with marketing and sales tools</h2>
                       <p>Easily connect with the other tools that help keep your business grow. Integrate BuyNoir with your favorite marketing tools to level up your business.</p>
-                      <a href="#" class="btn btn_md_primary margin-t-2 bg-green2 c-white sweep_top sweep_letter rounded-12">
+                      <a href="{{route("company.create.index")}}" class="btn btn_md_primary margin-t-2 bg-green2 c-white sweep_top sweep_letter rounded-12">
                         <div class="inside_item">
                           <span data-hover="Get Started">Get Started</span>
                         </div>
@@ -443,7 +443,7 @@
     {{ view_render_event('bagisto.saas.companies.home.content.after') }}
 
   
-
+    
 @endsection
 
  

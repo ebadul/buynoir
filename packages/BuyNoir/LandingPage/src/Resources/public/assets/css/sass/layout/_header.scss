@@ -36,7 +36,7 @@
 -----------------------------*/
 
 header.no_blur {
-    background: rgba(255, 255, 255, 0.6);
+    // background: rgba(255, 255, 255, 0.6);
 }
 
 header {
@@ -51,11 +51,11 @@ header {
     @include prefixer(backdrop-filter, saturate(1) blur(20px), webkit moz o ms);
     @include prefixer(transition, 0.3s, webkit moz o ms);
     &.no_blur {
-        background: rgba(255, 255, 255, 0.6);
+        // background: rgba(255, 255, 255, 0.6);
         /*****@include prefixer(backdrop-filter, saturate(1) blur(0), webkit moz o ms);*****/
     }
     #myNavbar {
-        background: rgba(255, 255, 255, 0.6);
+        // background: rgba(255, 255, 255, 0.6);
     }
     .fixed-header & {
         background: rgba(255, 255, 255, 0.8);

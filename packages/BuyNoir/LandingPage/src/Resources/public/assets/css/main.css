@@ -2134,6 +2134,11 @@ header.no_blur {
     backdrop-filter: saturate(1) blur(0) !important;
 }
 
+a.topbar-signup-link,
+a.topbar-signup-link:visited {
+    color: #fff;
+}
+
 .fixed-header header {
     background: rgba(255, 255, 255, 0.8);
     -webkit-backdrop-filter: saturate(1) blur(20px) !important;
@@ -2145,7 +2150,8 @@ header.no_blur {
 
 @-moz-document url-prefix() {
     .fixed-header header {
-        background: white;
+        /* background: white; */
+        background: rgba(255, 255, 255, 0.8);
         border-bottom: 0 !important;
         backdrop-filter: saturate(1) blur(0);
         box-shadow: 0px 10px 40px 0px rgba(11, 34, 56, 0.05);
