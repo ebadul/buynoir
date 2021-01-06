@@ -2132,16 +2132,21 @@ header.no_blur {
     -o-backdrop-filter: saturate(1) blur(0) !important;
     -ms-backdrop-filter: saturate(1) blur(0) !important;
     backdrop-filter: saturate(1) blur(0) !important;
-    background: rgba(255, 255, 255, 0.8);
+    background: rgba(255, 255, 255, 1);
 }
 
 .fixed-header header {
-    background: rgba(255, 255, 255, 0.8);
     -webkit-backdrop-filter: saturate(1) blur(20px) !important;
     -o-backdrop-filter: saturate(1) blur(20px) !important;
     -ms-backdrop-filter: saturate(1) blur(20px) !important;
     backdrop-filter: saturate(1) blur(20px) !important;
     border-bottom: 1px solid #edeef1;
+    background: rgba(255, 255, 255, .6);
+}
+
+a.topbar-signup-link,
+a.topbar-signup-link:visited {
+    color: #fff;
 }
 
 @-moz-document url-prefix() {

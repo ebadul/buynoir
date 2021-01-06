@@ -8,13 +8,13 @@
             BuyNoir<span class="c-orange-red">.</span>
           </a>
           <div class="social--media">
-            <a href="https://www.instagram.com/buynoir_official" class="btn so-link" target="_blank" rel="noreferrer">
+            <a href="https://www.instagram.com/buynoir_official/" class="btn so-link" target="_blank" rel="noreferrer">
               <i class="tio instagram"></i>
             </a>
             <a href="https://twitter.com/NoirBuy" class="btn so-link" target="_blank" rel="noreferrer" class="btn so-link">
               <i class="tio twitter"></i>
             </a>
-            <a href="https://facebook.com/NoirBuy_official" class="btn so-link" target="_blank" rel="noreferrer">
+            <a href="https://www.facebook.com/BuyNoirApp/" class="btn so-link" target="_blank" rel="noreferrer">
               <i class="tio facebook_square"></i>
             </a>
           </div>
@@ -96,32 +96,74 @@
   <!-- End. Modal -->
 
   <!-- Back to top with progress indicator-->
-  <div class="prgoress_indicator">
+  <div class="prgoress_indicator" id="prgoress_indicator" onclick='navTo()'>
     <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
       <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
     </svg>
   </div>
 
   <!-- Tosts -->
-  <div aria-live="polite" aria-atomic="true" class="d-flex justify-content-center align-items-center">
+  {{--  <div aria-live="polite" aria-atomic="true"  class="d-flex justify-content-center align-items-center">
     <div class="toast toast_demo" id="myTost" role="alert" aria-live="assertive" aria-atomic="true"
       data-animation="true" data-autohide="false">
-      <div class="toast-body">
+      <div class="toast-body" id="cookieconsent">
         <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
           <i class="tio clear"></i>
         </button>
         <h5>Hey fam ✊🏾! </h5>
         <p>We use cookies throughout this site to make your experience better. <a href="#">Ok?</a></p>
+
+        <div id="consent-popup" class="hidden">
+          <p>By using this site you agree to our <a href="#">Terms and Conditions</a>.
+              Please <a id="accept" href="#">Accept</a> these before using the site.
+          </p>
+      </div>
+
       </div>
     </div>
-  </div>
+  </div>  --}}
   <!-- End. Toasts -->
 
   <!-- Start Section Loader -->
   <section class="loading_overlay">
     <div class="loader_logo">
       <!-- <img class="logo" src="assets/img/logo.svg" /> -->
-      <span class="logo">Made in ATL!</span>
+      <span class="logo">BuyNoir!</span>
     </div>
   </section>
   <!-- End. Loader -->
+
+ 
+  <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js"></script>
+  <script>
+          function navTo(){
+            window.scrollTo({
+              top: 0,
+              behavior: 'smooth'   
+            });
+          }
+           
+          window.addEventListener("load", function(){
+          window.cookieconsent.initialise({
+            "palette": {
+                "popup": {
+                  "background": "#000"
+                },
+                "button": {
+                  "background": "#f1d600"
+                },
+              },
+            content: {
+              header: 'Cookiessss used on the website!',
+              message: 'We use cookies throughout this site to make your experience better.',
+              dismiss: 'Got it!',
+              allow: 'Allow cookies',
+              deny: 'Decline',
+              link: 'Learn more',
+              href: 'http://buynoir.co',
+              close: '&#x274c;',
+            }
+          })});
+  </script>
+     
