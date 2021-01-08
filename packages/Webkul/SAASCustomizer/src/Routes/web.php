@@ -1,7 +1,6 @@
 <?php
 
-
-Route::any('/', 'BuyNoir\LandingPage\Http\Controllers\LandingPageController@index')->defaults('_config', [
+Route::any('/index', 'BuyNoir\LandingPage\Http\Controllers\LandingPageController@index')->defaults('_config', [
     'view' => 'landingpage_view::landingpage.index'
 ])->name('saas.home.index');
 

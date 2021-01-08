@@ -1,5 +1,5 @@
 <h2>Welcome to shop page</h2>
-@extends('landingpage_view::landingpage.layouts.master')
+
 
 @php
     $channel = company()->getCurrentChannel();
