@@ -63,7 +63,7 @@ class ValidatesDomain
         } else {
             //case where IP validation passes then it should redirect to the main domain
             // return redirect()->route('company.create.index');
-            return redirect()->route('saas.home.index');
+            return redirect()->route('buynoir.home.index');
         }
 
 
@@ -77,7 +77,11 @@ class ValidatesDomain
                 return $next($request);
             } else {
                 // return redirect()->route('company.create.index');
+<<<<<<< HEAD
 		return redirect()->route('saas.home.index');
+=======
+                return redirect()->route('buynoir.home.index');
+>>>>>>> 8f9f4fcab22d059269a8d0eaf8df381910d77781
             }
         } else {
 		            if ((request()->is('company/*') || request()->is('super/*')) && ! request()->is('company/seed-data')) {
