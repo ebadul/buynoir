@@ -1,6 +1,6 @@
 <?php
 
-namespace Webkul\SAASCustomizer\Http\Controllers\Session;
+namespace Webkul\SAASCustomizer\Http\Controllers\Shop;
 
 use Webkul\SAASCustomizer\Http\Controllers\Controller;
 use Webkul\Customer\Repositories\CustomerRepository;
