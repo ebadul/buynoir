@@ -2132,6 +2132,7 @@ header.no_blur {
     -o-backdrop-filter: saturate(1) blur(0) !important;
     -ms-backdrop-filter: saturate(1) blur(0) !important;
     backdrop-filter: saturate(1) blur(0) !important;
+    background: rgba(255, 255, 255, 1);
 }
 
 a.topbar-signup-link,
