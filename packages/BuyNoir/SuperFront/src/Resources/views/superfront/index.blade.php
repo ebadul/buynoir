@@ -1,4 +1,4 @@
-@extends('landingpage_view::landingpage.layouts.master')
+@extends('superfront_view::superfront.layouts.master')
 
 @php
     $channel = company()->getCurrentChannel();
@@ -243,7 +243,7 @@
                   </div>
                   <div class="col-lg-7 order-0 order-lg-1 mb-4 mb-lg-0">
                     <div class="screen__ipad">
-                      <img class="ipad_img" src="{{ asset('buynoir/landingpage/assets/img/software/woman.jpeg')}}" alt="" data-aos="fade-up" data-aos-delay="0">
+                      <img class="ipad_img" src="{{ asset('buynoir/superfront/assets/img/software/woman.jpeg')}}" alt="" data-aos="fade-up" data-aos-delay="0">
                     </div>
                   </div>
                 </div>
@@ -294,7 +294,7 @@
                   </div>
                   <div class="col-lg-7 order-0 order-lg-1 mb-4 mb-lg-0">
                     <div class="screen__ipad">
-                      <img class="ipad_img" src="{{ asset('buynoir/landingpage/assets/img/shop.jpeg')}}" alt="" data-aos="fade-up" data-aos-delay="0">
+                      <img class="ipad_img" src="{{ asset('buynoir/superfront/assets/img/shop.jpeg')}}" alt="" data-aos="fade-up" data-aos-delay="0">
                     </div>
                   </div>
                 </div>
@@ -345,7 +345,7 @@
                   </div>
                   <div class="col-lg-7 order-0 order-lg-1 mb-4 mb-lg-0">
                     <div class="screen__ipad">
-                      <img class="ipad_img" src="{{ asset('buynoir/landingpage/assets/img/bakery.jpeg')}}" alt="" data-aos="fade-up" data-aos-delay="0">
+                      <img class="ipad_img" src="{{ asset('buynoir/superfront/assets/img/bakery.jpeg')}}" alt="" data-aos="fade-up" data-aos-delay="0">
                     </div>
                   </div>
                 </div>
@@ -374,25 +374,25 @@
                 </div>
                 <div class="block__circle">
                   <div class="item_logo" data-aos="fade-up" data-aos-delay="0">
-                    <img src="{{ asset('buynoir/landingpage/assets/img/software/logo/150.png')}}" alt="">
+                    <img src="{{ asset('buynoir/superfront/assets/img/software/logo/150.png')}}" alt="">
                   </div>
                   <div class="item_logo" data-aos="fade-up" data-aos-delay="100">
-                    <img src="{{ asset('buynoir/landingpage/assets/img/software/logo/150.png')}}" alt="">
+                    <img src="{{ asset('buynoir/superfront/assets/img/software/logo/150.png')}}" alt="">
                   </div>
                   <div class="item_logo" data-aos="fade-up" data-aos-delay="200">
-                    <img src="{{ asset('buynoir/landingpage/assets/img/software/logo/150.png')}}" alt="">
+                    <img src="{{ asset('buynoir/superfront/assets/img/software/logo/150.png')}}" alt="">
                   </div>
                   <div class="item_logo" data-aos="fade-up" data-aos-delay="300">
-                    <img src="{{ asset('buynoir/landingpage/assets/img/software/logo/150.png')}}" alt="">
+                    <img src="{{ asset('buynoir/superfront/assets/img/software/logo/150.png')}}" alt="">
                   </div>
                   <div class="item_logo" data-aos="fade-up" data-aos-delay="400">
-                    <img src="{{ asset('buynoir/landingpage/assets/img/software/logo/150.png')}}" alt="">
+                    <img src="{{ asset('buynoir/supperfront/assets/img/software/logo/150.png')}}" alt="">
                   </div>
                   <div class=" item_logo" data-aos="fade-up" data-aos-delay="500">
-                    <img src="{{ asset('buynoir/landingpage/assets/img/software/logo/150.png')}}" alt="">
+                    <img src="{{ asset('buynoir/superfront/assets/img/software/logo/150.png')}}" alt="">
                   </div>
                   <div class="item_logo" data-aos="fade-up" data-aos-delay="600">
-                    <img src="{{ asset('buynoir/landingpage/assets/img/software/logo/150.png')}}" alt="">
+                    <img src="{{ asset('buynoir/superfront/assets/img/software/logo/150.png')}}" alt="">
                   </div>
                 </div>
               </div>

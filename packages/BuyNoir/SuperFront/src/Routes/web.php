@@ -2,8 +2,8 @@
        
 
     
-        Route::get('/', 'BuyNoir\SuperFront\Http\Controllers\SuperFrontController@index')
-        ->defaults('_config', ['view' => 'superfront_view::superfront.shop-index'])
+        Route::get('/index', 'BuyNoir\SuperFront\Http\Controllers\SuperFrontController@index')
+        ->defaults('_config', ['view' => 'superfront_view::superfront.index'])
         ->name('buynoir.home.index');
 
     Route::group(['middleware' => ['web', 'company-locale']], function () {

@@ -1,4 +1,9 @@
+<<<<<<< HEAD:packages/BuyNoir/LandingPage/src/Resources/views/landingpage/shop-index.blade.php
+<h2>Welcome to shop page</h2>
+
+=======
 @extends('superfront_view::superfront.layouts.master')
+>>>>>>> 8f9f4fcab22d059269a8d0eaf8df381910d77781:packages/BuyNoir/SuperFront/src/Resources/views/superfront/shop-index.blade.php
 
 @php
     $channel = company()->getCurrentChannel();
