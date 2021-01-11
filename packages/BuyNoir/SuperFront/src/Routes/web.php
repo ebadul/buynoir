@@ -2,7 +2,7 @@
        
 
     
-        Route::get('/', 'BuyNoir\SuperFront\Http\Controllers\SuperFrontController@index')
+        Route::get('/index', 'BuyNoir\SuperFront\Http\Controllers\SuperFrontController@index')
         ->defaults('_config', ['view' => 'superfront_view::superfront.index'])
         ->name('buynoir.home.index');
 

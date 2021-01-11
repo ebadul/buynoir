@@ -1,7 +1,7 @@
 <?php
-Route::any('/index', 'BuyNoir\LandingPage\Http\Controllers\LandingPageController@index')->defaults('_config', [
-    'view' => 'landingpage_view::landingpage.index'
-])->name('saas.home.index');
+//Route::any('/index', 'BuyNoir\LandingPage\Http\Controllers\LandingPageController@index')->defaults('_config', [
+ //   'view' => 'landingpage_view::landingpage.index'
+//])->name('saas.home.index');
 
     //    Route::any('/', 'Webkul\SAASCustomizer\Http\Controllers\Company\HomeController@index')->defaults('_config', [
      //        'view' => 'saas::companies.home.index'
@@ -234,7 +234,7 @@ Route::group(['middleware' => ['web', 'company-locale']], function () {
         //     'view' => 'saas::companies.auth.register'
         // ])->name('company.create.index');
         Route::get('/register', 'Webkul\SAASCustomizer\Http\Controllers\Company\CompanyController@create')->defaults('_config', [
-            'view' => 'landingpage_view::landingpage.registration'
+            'view' => 'superfront_view::superfront.registration'
         ])->name('company.create.index');
 
         Route::post('/register', 'Webkul\SAASCustomizer\Http\Controllers\Company\CompanyController@store')->name('company.create.store');
