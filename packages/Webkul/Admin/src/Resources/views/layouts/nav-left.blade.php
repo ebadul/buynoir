@@ -1,4 +1,4 @@
-<div class="navbar-left" style="background-color:gray">
+<div class="navbar-left buynoir-navbar-left">
     <ul class="menubar">
         @foreach ($menu->items as $menuItem)
             <li class="menu-item {{ $menu->getActive($menuItem) }}">

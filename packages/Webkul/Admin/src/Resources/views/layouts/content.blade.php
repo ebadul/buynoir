@@ -5,7 +5,7 @@
     
         @include ('admin::layouts.nav-aside')
 
-        <div class="content-wrapper">
+        <div class="content-wrapper buynoir-inside-container">
 
             @include ('admin::layouts.tabs')
 

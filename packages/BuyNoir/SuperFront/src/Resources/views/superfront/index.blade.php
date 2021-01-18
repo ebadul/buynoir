@@ -386,7 +386,7 @@
                     <img src="{{ asset('buynoir/superfront/assets/img/software/logo/150.png')}}" alt="">
                   </div>
                   <div class="item_logo" data-aos="fade-up" data-aos-delay="400">
-                    <img src="{{ asset('buynoir/supperfront/assets/img/software/logo/150.png')}}" alt="">
+                    <img src="{{ asset('buynoir/superfront/assets/img/software/logo/150.png')}}" alt="">
                   </div>
                   <div class=" item_logo" data-aos="fade-up" data-aos-delay="500">
                     <img src="{{ asset('buynoir/superfront/assets/img/software/logo/150.png')}}" alt="">

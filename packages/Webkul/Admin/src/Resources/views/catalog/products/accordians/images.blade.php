@@ -54,9 +54,7 @@
 
             <img class="preview" :src="imageData" v-if="imageData.length > 0">
 
-            <label class="remove-image" @click="removeImage()">
-                {{ __('admin::app.catalog.products.remove-image-btn-title') }}
-            </label>
+            <label class="remove-image" @click="removeImage()">Remove Image</label>
         </label>
     </script>
 

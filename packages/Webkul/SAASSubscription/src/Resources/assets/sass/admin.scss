@@ -1,0 +1,99 @@
+.plan-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    justify-items: center;
+    grid-auto-rows: auto;
+    grid-column-gap: 30px;
+    grid-row-gap: 15px;
+
+    .card {
+        padding: 0;
+        border: 1px solid #c7c7c7;
+        display: inline-block;
+        width: 100%;
+        height: auto;
+        text-align: center;
+
+        .card-title {
+            padding: 20px;
+            border-bottom: 1px solid #c7c7c7;
+            color: #3a3a3a;
+        }
+
+        .card-info {
+            padding: 20px;
+
+            h2 {
+                margin: 0;
+            }
+
+            p {
+                color: #6f6f6f;
+            }
+
+            ul {
+                li {
+                    border-bottom: 0;
+                }
+            }
+
+            .btn {
+                width: 100%;
+                margin-top: 20px;
+            }
+        }
+    }
+}
+
+.checkout {
+    position: relative;
+
+    .sale-container {
+        padding-right: 390px;
+    }
+
+    .sale-summary {
+        width: 350px;
+        position: absolute;
+        right: 0;
+        top: 0;
+
+        h3 {
+            font-size: 16px;
+            margin-top: 0;
+        }
+    
+        .item-detail {
+            margin-top:12px;
+    
+            label {
+                &.right {
+                    float: right;
+                }
+            }
+        }
+    
+        .payable-amount {
+            margin-top: 17px;
+            border-top: 1px solid #c7c7c7;
+            padding-top: 12px;
+    
+            label {
+                font-weight: bold;
+    
+                &.right {
+                    float:right;
+                }
+            }
+        }
+
+        .btn {
+            width: 100%;
+            margin-top: 30px;
+        }
+    }
+}
+
+.tabs {
+    margin-bottom: 20px;
+}
