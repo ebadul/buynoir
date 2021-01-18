@@ -40,6 +40,9 @@ body {
     color: #fff;
 }
 
+.buynoir-navbar .navbar-top-middle div.brand-logo a {
+    vertical-align:text-top;
+}
 
 /** navbar-left **/
 
