@@ -248,7 +248,7 @@
                                           first_name: null,
                                           last_name: null,
                                           phone_no: null,
-                                          name: null,
+                                          name: "BuyNoir",
                                           productcategory: "",
                                           elsebusinessStart: "START",
                                           username: null,
