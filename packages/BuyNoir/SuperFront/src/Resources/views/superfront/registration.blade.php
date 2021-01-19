@@ -236,7 +236,8 @@
                                   Vue.component('seller-registration', {
                                       template: '#seller-registration',
                                       inject: ['$validator'],
-
+                                      var vDate = new Date();
+                                      var nDigit = "BuyNoir-"+d.getTime();
                                       data: () => ({
                                           data_seed_url: @json(route('company.create.data')),
                                           step_one: true,
@@ -248,7 +249,7 @@
                                           first_name: null,
                                           last_name: null,
                                           phone_no: null,
-                                          name: "BuyNoir",
+                                          name: nDigit,
                                           productcategory: "",
                                           elsebusinessStart: "START",
                                           username: null,
