@@ -232,12 +232,11 @@
 
                               <script>
                                   
-                                  
+                                  var vDate = new Date();
+                                  var nDigit = "BuyNoir-"+vDate.getTime();
                                   Vue.component('seller-registration', {
                                       template: '#seller-registration',
                                       inject: ['$validator'],
-                                      var vDate = new Date();
-                                      var nDigit = "BuyNoir-"+d.getTime();
                                       data: () => ({
                                           data_seed_url: @json(route('company.create.data')),
                                           step_one: true,
