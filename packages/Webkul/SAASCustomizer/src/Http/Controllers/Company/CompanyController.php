@@ -242,12 +242,13 @@ class CompanyController extends Controller
     {
         $niceNames = array(
             'username' => 'Username',
-            'name' => 'Organization Name'
+            'productcategory' => 'Selling Category'
+            //'name' => 'Organisation name'
         );
 
         $validator = Validator::make(request()->all(), [
             'username' => 'required|alpha_num|min:3|max:64|unique:companies,username',
-            'name' => 'required|string|max:191|unique:companies,name'
+            //'name' => 'required|string|max:191|unique:companies,name'
         ]);
 
         $validator->setAttributeNames($niceNames);
@@ -260,6 +261,7 @@ class CompanyController extends Controller
         } else {
             return response()->json([
                 'success' => true,
+                'data' => request()->all(),
                 'errors' => null
             ], 200);
         }

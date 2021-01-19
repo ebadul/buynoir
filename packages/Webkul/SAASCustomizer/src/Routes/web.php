@@ -231,6 +231,10 @@ Route::group(['middleware' => ['web', 'company-locale']], function () {
 
         //Store front home
 
+        Route::get('/home', 'Webkul\SAASCustomizer\Http\Controllers\Company\HomeController@index')->defaults('_config', [
+            'view' => 'saas::companies.home.index'
+        ])->name('saas.home.index');
+
         // Route::get('/register', 'Webkul\SAASCustomizer\Http\Controllers\Company\CompanyController@create')->defaults('_config', [
         //     'view' => 'saas::companies.auth.register'
         // ])->name('company.create.index');

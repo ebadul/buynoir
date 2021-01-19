@@ -78,22 +78,12 @@
                                           </div>
 
                                           <div class="step-navigator">
-                                              {{-- <ul class="step-list">
-                                                  <li class="step-item" :class="{ active: isOneActive }" v-on:click="stepNav(1)">1</li>
-
-                                                  <li class="step-item" :class="{ active: isTwoActive }" v-on:click="stepNav(2)">2</li>
-
-                                                  <li class="step-item" :class="{ active: isThreeActive }" v-on:click="stepNav(3)">3</li>
-                                              </ul> --}}
+                                              
                                           </div>
                                          
 
                                           <form class="registration" data-vv-scope="step-one" v-if="step_one" @submit.prevent="validateForm('step-one')">
-                                              {{-- <h3 class="mb-30">{{ __('saas::app.tenant.registration.step-1') }}:</h3> --}}
-
-                                              {{-- <h4>{{ __('saas::app.tenant.registration.auth-cred') }}</h4> --}}
-
-
+                                            
 
                                               <div class="step-navigator">
                                                 <div class='registration-subtitle'>Launch your online business now.<br/>
@@ -136,8 +126,6 @@
                                                   {{-- <h3 class="mb-30">{{ __('saas::app.tenant.registration.step-2') }}:</h3>
 
                                                   <h4>{{ __('saas::app.tenant.registration.personal') }}</h4> --}}
-
-
 
                                                   <div class="step-navigator">
                                                     <div class='registration-subtitle'>Tell us about you</div>
@@ -193,43 +181,48 @@
                                                       <span class="control-error" v-show="errors.has('step-three.username')">@{{ errors.first('step-three.username') }}</span>
                                                   </div>
 
-                                                  <div class="control-group" :class="[errors.has('step-three.name') ? 'has-error' : '']">
-                                                      {{-- <label for="name" class="required">{{ __('saas::app.tenant.registration.org-name') }}</label> --}}
+                                                  <div class="control-group" :class="[errors.has('step-three.productcategory') ? 'has-error' : '']">
 
-                                                      <input type="text" class="control" name="name" v-model="name" placeholder="{{ __('saas::app.tenant.registration.org-name') }}" v-validate="'required'" data-vv-as="&quot;{{ __('saas::app.tenant.registration.org-name') }}&quot;">
-
-                                                      <span class="control-error" v-show="errors.has('step-three.name')">@{{ errors.first('step-three.name') }}</span>
+                                                      <select class="control" name="productcategory" v-model="productcategory" v-validate="'required'" >
+                                                            <option value="" selected>{{ __('saas::app.tenant.registration.org-name') }}</option>
+                                                            <option value="Cloths">Cloths</option>
+                                                            <option value="Shoes">Shoes</option>
+                                                            <option value="Jwellary">Jwellary</option>
+                                                            <option value="Books">Books</option>
+                                                            <option value="Glossary">Glossary</option>
+                                                      </select>
+                                                      <span class="control-error" v-show="errors.has('step-three.productcategory')">@{{ errors.first('step-three.productcategory') }}</span>
                                                   </div>
 
                                                   <div class="control-group mt-4" :class="[errors.has('step-three.name') ? 'has-error' : '']">
                                                       <label for="elsebusiness" class="">{{ __('saas::app.tenant.registration.else-business') }}</label>
-
                                                       <div class="row mt-3">
                                                         <div class="col-md-4">
-                                                            <input type="radio" class="" name="elsebusiness" v-model="name" v-validate="'required'" data-vv-as="&quot;{{ __('saas::app.tenant.registration.else-business') }}&quot;">
-                                                            {{ __('saas::app.tenant.registration.just-start') }}
+                                                            <label>
+                                                                <input type="radio" class="" id="elsebusinessStart" name="elsebusiness" v-model="elsebusinessStart" value="START"  v-validate="''" data-vv-as="&quot;{{ __('saas::app.tenant.registration.else-business') }}&quot;">
+                                                                {{ __('saas::app.tenant.registration.just-start') }}
+                                                            </label>
                                                         </div>
                                                         <div class="col-md-8">
-                                                            <input type="radio" class="" name="elsebusiness" v-model="name" v-validate="'required'" data-vv-as="&quot;{{ __('saas::app.tenant.registration.else-business') }}&quot;">
-                                                            {{ __('saas::app.tenant.registration.else-moving') }}
+                                                            <label>
+                                                                <input type="radio" class="" id="elsebusinessMoving" name="elsebusiness" v-model="elsebusinessStart" value="MOVING" v-validate="''" data-vv-as="&quot;{{ __('saas::app.tenant.registration.else-business') }}&quot;">
+                                                                {{ __('saas::app.tenant.registration.else-moving') }}
+                                                            </label>
                                                         </div>
                                                       </div>
 
-                                                      <span class="control-error" v-show="errors.has('step-three.name')">@{{ errors.first('step-three.name') }}</span>
                                                   </div>
 
                                                   <div class="control-group text-right">
                                                       <button class="btn btn-lg btn-warning registration-btn" :disabled="errors.has('step-three.username') || errors.has('step-three.name') || createdclicked">{{ __('saas::app.tenant.registration.create-store') }}</button>
                                                   </div>
                                               </div>
-                                          </form>
+                                        </form>
 
 
-                                          <ul class="step-list registration-ul">
+                                        <ul class="step-list registration-ul">
                                             <li class="registration-step-item" :class="{ active: isOneActive }" v-on:click="stepNav(1)"></li>
-
                                             <li class="registration-step-item" :class="{ active: isTwoActive }" v-on:click="stepNav(2)"></li>
-
                                             <li class="registration-step-item" :class="{ active: isThreeActive }" v-on:click="stepNav(3)"></li>
                                         </ul>
 
@@ -238,15 +231,17 @@
                               </script>
 
                               <script>
+                                  
+                                  
                                   Vue.component('seller-registration', {
                                       template: '#seller-registration',
                                       inject: ['$validator'],
 
                                       data: () => ({
                                           data_seed_url: @json(route('company.create.data')),
-                                          step_one: true,
+                                          step_one: false,
                                           step_two: false,
-                                          step_three: false,
+                                          step_three: true,
                                           email: null,
                                           password: null,
                                           password_confirmation: null,
@@ -254,6 +249,8 @@
                                           last_name: null,
                                           phone_no: null,
                                           name: null,
+                                          productcategory: "",
+                                          elsebusinessStart: "START",
                                           username: null,
                                           createdclicked: false,
                                           registrationData: {},
@@ -337,29 +334,24 @@
                                           },
 
                                           catchResponseThree () {
+                                              console.log('hello start:', this.elsebusinessStart)
                                               this.createdclicked = true;
-
                                               var o_this = this;
-
                                               axios.post('{{ route('company.validate.step-three') }}', {
                                                   username: this.username,
-                                                  name: this.name,
+                                                  productcategory: this.productcategory,
                                               }).then(function (response) {
                                                   o_this.errors.clear();
-
                                                   o_this.sendDataToServer();
                                               }).catch(function (errors) {
                                                   serverErrors = errors.response.data.errors;
-
                                                   o_this.createdclicked = false;
-
                                                   o_this.$root.addServerErrors('step-three');
                                               });
                                           },
 
                                           handleErrorResponse (response, scope) {
                                               serverErrors = response.data.errors;
-
                                               this.$root.addServerErrors(scope);
                                           },
 
@@ -374,7 +366,9 @@
                                                   password: this.password,
                                                   password_confirmation: this.password_confirmation,
                                                   name: this.name,
-                                                  username: this.username
+                                                  productcategory: this.productcategory,
+                                                  username: this.username,
+                                                  elsebusinessStart: this.elsebusinessStart
                                               }).then(function (response) {
                                                   window.location.href = response.data.redirect;
                                               }).catch(function (errors) {
@@ -394,6 +388,15 @@
                                           }
                                       }
                                   });
+
+                                  setTimeout(function(){
+                                        var elseStart = document.getElementById('elsebusinessStart');
+                                        if(elseStart){
+                                            elseStart.checked=true;
+                                        }
+                                  },1500);
+                                 
+
                               </script>
                           @endpush
                       
