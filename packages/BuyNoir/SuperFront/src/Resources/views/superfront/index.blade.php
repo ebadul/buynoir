@@ -354,7 +354,7 @@
             <!-- End.software_web -->
     
             <!-- Start integration__logo -->
-            <section class="integration__logo" id="Integrations">
+            <section class="integration__logo hidden" id="Integrations">
               <div class="container">
                 <div class="row justify-content-center text-center">
                   <div class="col-md-8 col-lg-5">

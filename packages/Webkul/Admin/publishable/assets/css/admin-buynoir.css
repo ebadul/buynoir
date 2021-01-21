@@ -41,8 +41,9 @@ body {
 }
 
 .buynoir-navbar .navbar-top-middle div.brand-logo a {
-    vertical-align:text-top;
+    vertical-align: text-top;
 }
+
 
 /** navbar-left **/
 
@@ -108,6 +109,12 @@ body {
 
 .buynoir-navbar-left ul.menubar li.menu-item .configuration-icon {
     background-image: url(../icon-images/configuration.png);
+}
+
+.active.arrow-down-icon {
+    background-image: url(../icon-images/Arrow-Down-Light.png); 
+    width: 14px;
+    height: 8px;
 }
 
 .buynoir-navbar .search-bar {
@@ -202,4 +209,35 @@ body {
     font-weight: bold;
     color: #aa5352;
     border-bottom: 0;
+}
+
+/*** admin login ****/
+div.center-box { background: #fdf4f0; }
+#buynoir-panel-login{
+    box-shadow:none;
+    background: #fae3da;
+    border:1px solid #aa5352;
+}
+#buynoir-panel-login .btn-primary{
+    background: #f2c62a;
+}
+
+#buynoir-panel-login .btn-primary{
+    background: #f2c62a;
+}
+#buynoir-panel-login a, #buynoir-panel-login a:visited{
+    color: #aa5352;
+    font-weight:bold;
+}
+
+.btn-primary{
+    background:#f2c62a !important;
+}
+
+.control-group input:checked+.slider {
+    background-color: #f2c62a !important;
+}
+
+.control-group input:focus+.slider {
+    box-shadow: 0 0 1px #aa5352;
 }
