@@ -53,28 +53,33 @@
             <section class="section_account section-registration">
                 <div class="container-fluid">
                   <div class="row ">
-                    <div class="col-md-4 col-lg-4">
+                    {{--  <div class="col-md-4 col-lg-4">
                       <div class="fixed_side_data">
                         <div class="head_nav">
-                          {{-- <a href="{{route('buynoir.home.index')}}" class="btn btn_logo">
+                          <a href="{{route('buynoir.home.index')}}" class="btn btn_logo">
                             <!-- <img src="assets/img/logo.svg" /> -->
                             BuyNoir<span class="c-blue">.</span>
-                          </a> --}}
+                          </a> 
                         </div>
                       </div>
-                    </div>
+                    </div>  --}}
                     <div class="col-md-8 col-lg-8 mx-auto">
                           <seller-registration></seller-registration>
 
                           @push('scripts')
                               <script type="text/x-template" id="seller-registration">
-                                  <div class="company-content">
-                                      <div class="form-container">
+                                  <div class="company-content" id="buynoir-shop-registration">
+                                      <div class="form-container" style="border:none">
                                         <div class="head_nav">
-                                            <a href="{{route('buynoir.home.index')}}" class="btn btn_logo">
-                                              <!-- <img src="assets/img/logo.svg" /> -->
-                                              BuyNoir<span class="c-blue"></span>
-                                            </a>
+
+                                            <div class="brand-logo">
+                                                <a href="{{ route('buynoir.home.index') }}" class="btn btn_logo">
+                                                  
+                                                        <img src="{{ asset('vendor/webkul/ui/assets/images/logo.png') }}" alt="{{ config('app.name') }}"/>
+                                                  
+                                                </a>
+                                            </div>
+
                                           </div>
 
                                           <div class="step-navigator">
@@ -94,7 +99,7 @@
                                               <div class="control-group" :class="[errors.has('step-one.email') ? 'has-error' : '']">
                                                   {{-- <label for="email" class="required">{{ __('saas::app.tenant.registration.email') }}</label> --}}
 
-                                                  <input type="text" v-validate="'required|email|max:191'" class="control" v-model="email" name="email" data-vv-as="&quot;{{ __('saas::app.tenant.registration.email') }}&quot;" placeholder="Auth Email">
+                                                  <input type="text" v-validate="'required|email|max:191'" class="control" v-model="email" name="email" data-vv-as="&quot;{{ __('saas::app.tenant.registration.email') }}&quot;" placeholder="Email Address">
 
                                                   <span class="control-error" v-show="errors.has('step-one.email')">@{{ errors.first('step-one.email') }}</span>
                                               </div>
@@ -190,6 +195,7 @@
                                                             <option value="Jwellary">Jwellary</option>
                                                             <option value="Books">Books</option>
                                                             <option value="Glossary">Glossary</option>
+                                                            <option value="Others">Others</option>
                                                       </select>
                                                       <span class="control-error" v-show="errors.has('step-three.productcategory')">@{{ errors.first('step-three.productcategory') }}</span>
                                                   </div>
@@ -248,7 +254,7 @@
                                           first_name: null,
                                           last_name: null,
                                           phone_no: null,
-                                          name: nDigit,
+                                          name: "",
                                           productcategory: "",
                                           elsebusinessStart: "START",
                                           username: null,
@@ -334,7 +340,6 @@
                                           },
 
                                           catchResponseThree () {
-                                              console.log('hello start:', this.elsebusinessStart)
                                               this.createdclicked = true;
                                               var o_this = this;
                                               axios.post('{{ route('company.validate.step-three') }}', {
@@ -365,7 +370,7 @@
                                                   phone_no: this.phone_no,
                                                   password: this.password,
                                                   password_confirmation: this.password_confirmation,
-                                                  name: this.name,
+                                                  name: "BuyNoir-"+this.username,
                                                   productcategory: this.productcategory,
                                                   username: this.username,
                                                   elsebusinessStart: this.elsebusinessStart

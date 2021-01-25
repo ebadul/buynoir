@@ -128,7 +128,7 @@
   <section class="loading_overlay">
     <div class="loader_logo">
       <!-- <img class="logo" src="assets/img/logo.svg" /> -->
-      <span class="logo">BuyNoir!</span>
+      <span class="logo">Made in ATL!</span>
     </div>
   </section>
   <!-- End. Loader -->

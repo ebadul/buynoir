@@ -290,7 +290,7 @@ return [
             'auth-cred'             => 'Authentication Credentials',
             'email'                 => 'Email',
             'phone'                 => 'Phone',
-            'username'              => 'Store Name',
+            'username'              => 'User Name',
             'password'              => 'Password',
             'cpassword'             => 'Confirm Password',
             'continue'              => "Let's do this",

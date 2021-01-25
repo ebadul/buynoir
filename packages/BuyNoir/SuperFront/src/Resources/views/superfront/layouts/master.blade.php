@@ -18,8 +18,6 @@
         @endif
 
         <title>BuyNoir - The tools your business needs to sell more and grow more.</title>
-        <!-- favicon -->
-        <link rel="shortcut icon" href="{{ asset('buynoir/superfront/assets/img/favicon.ico')}}" type="image/x-icon" />
         <!-- Bootstrap 4.5 -->
         <link rel="stylesheet" href="{{ asset('buynoir/superfront/assets/css/bootstrap.min.css')}}" type="text/css" />
         <!-- animate -->
@@ -32,6 +30,7 @@
         <link rel="stylesheet" href="{{ asset('buynoir/superfront/assets/css/icons.css')}}" type="text/css" />
         <!-- main css -->
         <link rel="stylesheet" href="{{ asset('buynoir/superfront/assets/css/main.css')}}" type="text/css" />
+        <link rel="stylesheet" href="{{ asset('buynoir/superfront/assets/css/superfront-main.css')}}" type="text/css" />
         <!-- normalize -->
         <link rel="stylesheet" href="{{ asset('buynoir/superfront/assets/css/normalize.css')}}" type="text/css" />
       

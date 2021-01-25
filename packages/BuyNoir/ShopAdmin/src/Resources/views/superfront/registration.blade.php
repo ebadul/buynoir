@@ -53,17 +53,17 @@
             <section class="section_account section-registration">
                 <div class="container-fluid">
                   <div class="row ">
-                    <div class="col-md-4 col-lg-4">
-                      <div class="fixed_side_data">
+                    {{--  <div class="col-md-4 col-lg-4">
+                      <!--<div class="fixed_side_data">
                         <div class="head_nav">
-                          {{-- <a href="{{route('buynoir.home.index')}}" class="btn btn_logo">
+                         <a href="{{route('buynoir.home.index')}}" class="btn btn_logo">
                             <!-- <img src="assets/img/logo.svg" /> -->
                             BuyNoir<span class="c-blue">.</span>
-                          </a> --}}
+                          </a> 
                         </div>
                       </div>
-                    </div>
-                    <div class="col-md-8 col-lg-8 mx-auto">
+                    </div> --> --}}
+                    <div class="col-md-12 col-lg-12 mx-auto">
                           <seller-registration></seller-registration>
 
                           @push('scripts')
