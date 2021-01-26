@@ -39,7 +39,7 @@
                     </div>
 
                     <div class="control-group" style="margin-bottom: 0">
-                        <a href="{{ route('admin.session.create') }}" style="color:#fdf4f0">
+                        <a href="{{ route('admin.session.create') }}" style="color:#aa5352">
                             <i class="icon primary-back-icon"></i>
                             {{ __('admin::app.users.forget-password.back-link-title') }}
                         </a>
