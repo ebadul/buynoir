@@ -58,6 +58,6 @@ class PurgeController extends Controller
         session()->flash('success', trans('saas::app.tenant.registration.store-created'));
 
         // return redirect()->route('shop.home.index');
-        return redirect()->route('company.profile.index');
+        return redirect()->route('admin.session.store');
     }
 }

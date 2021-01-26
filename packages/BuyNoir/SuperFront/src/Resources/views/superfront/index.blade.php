@@ -46,7 +46,7 @@
     {!! view_render_event('bagisto.saas.companies.home.content.before') !!}
 
     <div id="wrapper">
-        <div id="content">
+        <div id="content" id="buynoir-homepage">
        
     
           <!-- Stat main -->

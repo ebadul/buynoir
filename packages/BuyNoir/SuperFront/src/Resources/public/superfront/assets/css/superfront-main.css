@@ -16,3 +16,15 @@
     font-size: 20px;
     height: 50px;
 }
+
+#myNavbar a.home-signup-btn {
+    color: #fdf4f0 !important;
+}
+
+#buynoir-homepage a:active,
+a:focus,
+a:hover,
+a:link,
+a:visited {
+    color: #aa5352 !important;
+}

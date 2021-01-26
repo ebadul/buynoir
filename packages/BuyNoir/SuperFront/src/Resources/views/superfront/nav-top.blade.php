@@ -4,8 +4,7 @@
       <!-- navbar -->
       <nav class="navbar navbar-expand-lg navbar-light px-sm-0">
         <a class="navbar-brand" href="{{route('buynoir.home.index')}}">
-          <!-- <img class="logo" src="assets/img/logo.svg" alt="logo" /> -->
-          BuyNoir<span class="c-green2">.</span>
+          <img sizes="16x16" src="{{ asset('vendor/webkul/ui/assets/images/logo.png') }}" />
         </a>
 
         <button class="navbar-toggler menu ripplemenu" type="button" data-toggle="collapse"
@@ -33,7 +32,7 @@
           <div class="nav_account btn_demo3">
             <button type="button" class="btn btn_sm_primary opacity-1 sweep_letter scale sweep_top rounded-8" style="background-color: rgba(170, 83, 82, .5);">
               <div class="inside_item">
-                 <a href="{{route('company.create.index')}}" class="topbar-signup-link">
+                 <a href="{{route('company.create.index')}}" class="topbar-signup-link home-signup-btn" >
                   <span data-hover="Free">Sign Up</span>
                 </a>
               </div>

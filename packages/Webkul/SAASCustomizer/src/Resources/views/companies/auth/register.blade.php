@@ -120,7 +120,7 @@
                             </div>
 
                             <div class="control-group">
-                                <button class="btn btn-lg btn-primary" :disabled="errors.has('step-three.username') || errors.has('step-three.name') || createdclicked">{{ __('saas::app.tenant.registration.continue') }}</button>
+                                <button class="btn btn-lg btn-primary" :disabled="errors.has('step-three.username') || errors.has('step-three.name') || createdclicked" style="font-size:18px">{{ __('saas::app.tenant.registration.continue') }}</button>
                             </div>
                         </div>
                     </form>

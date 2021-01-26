@@ -204,13 +204,13 @@
                                                       <label for="elsebusiness" class="">{{ __('saas::app.tenant.registration.else-business') }}</label>
                                                       <div class="row mt-3">
                                                         <div class="col-md-4">
-                                                            <label>
+                                                            <label style="color:#aa5352;">
                                                                 <input type="radio" class="" id="elsebusinessStart" name="elsebusiness" v-model="elsebusinessStart" value="START"  v-validate="''" data-vv-as="&quot;{{ __('saas::app.tenant.registration.else-business') }}&quot;">
                                                                 {{ __('saas::app.tenant.registration.just-start') }}
                                                             </label>
                                                         </div>
                                                         <div class="col-md-8">
-                                                            <label>
+                                                            <label style="color:#aa5352;">
                                                                 <input type="radio" class="" id="elsebusinessMoving" name="elsebusiness" v-model="elsebusinessStart" value="MOVING" v-validate="''" data-vv-as="&quot;{{ __('saas::app.tenant.registration.else-business') }}&quot;">
                                                                 {{ __('saas::app.tenant.registration.else-moving') }}
                                                             </label>
@@ -220,7 +220,7 @@
                                                   </div>
 
                                                   <div class="control-group text-right">
-                                                      <button class="btn btn-lg btn-warning registration-btn" :disabled="errors.has('step-three.username') || errors.has('step-three.name') || createdclicked">{{ __('saas::app.tenant.registration.create-store') }}</button>
+                                                      <button class="btn btn-lg btn-warning registration-btn" :disabled="errors.has('step-three.username') || errors.has('step-three.name') || createdclicked" style="font-size:18px">{{ __('saas::app.tenant.registration.create-store') }}</button>
                                                   </div>
                                               </div>
                                         </form>

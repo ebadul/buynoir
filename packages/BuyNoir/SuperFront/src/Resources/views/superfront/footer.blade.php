@@ -3,9 +3,9 @@
     <div class="container">
       <div class="row justify-content-md-center text-center">
         <div class="col-md-8">
-          <a class="logo c-dark" href="software.html">
+          <a class=" c-dark" href="">
             <!-- <img src="assets/img/logo.svg" alt=""> -->
-            BuyNoir<span class="c-orange-red">.</span>
+            <img  src="{{ asset('vendor/webkul/ui/assets/images/logo.png') }}" />
           </a>
           <div class="social--media">
             <a href="https://www.instagram.com/buynoir_official/" class="btn so-link" target="_blank" rel="noreferrer">

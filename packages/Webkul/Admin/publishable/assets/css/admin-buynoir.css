@@ -112,7 +112,7 @@ body {
 }
 
 .active.arrow-down-icon {
-    background-image: url(../icon-images/Arrow-Down-Light.png); 
+    background-image: url(../icon-images/Arrow-Down-Light.png);
     width: 14px;
     height: 8px;
 }
@@ -211,27 +211,35 @@ body {
     border-bottom: 0;
 }
 
+
 /*** admin login ****/
-div.center-box { background: #fdf4f0; }
-#buynoir-panel-login{
-    box-shadow:none;
+
+div.center-box {
+    background: #fdf4f0;
+}
+
+#buynoir-panel-login {
+    box-shadow: none;
     background: #fae3da;
-    border:1px solid #aa5352;
+    border: 1px solid #aa5352;
 }
-#buynoir-panel-login .btn-primary{
+
+#buynoir-panel-login .btn-primary {
     background: #f2c62a;
 }
 
-#buynoir-panel-login .btn-primary{
+#buynoir-panel-login .btn-primary {
     background: #f2c62a;
 }
-#buynoir-panel-login a, #buynoir-panel-login a:visited{
+
+#buynoir-panel-login a,
+#buynoir-panel-login a:visited {
     color: #aa5352;
-    font-weight:bold;
+    font-weight: bold;
 }
 
-.btn-primary{
-    background:#f2c62a !important;
+.btn-primary {
+    background: #f2c62a !important;
 }
 
 .control-group input:checked+.slider {
@@ -240,4 +248,8 @@ div.center-box { background: #fdf4f0; }
 
 .control-group input:focus+.slider {
     box-shadow: 0 0 1px #aa5352;
+}
+
+.buynoir-dashboard-container .dashboard-stats .dashboard-card .data {
+    color: #622231;
 }
