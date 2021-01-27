@@ -111,6 +111,7 @@
             "Webkul\\SocialLogin\\": "packages/Webkul/SocialLogin/src",
             "Webkul\\DebugBar\\": "packages/Webkul/DebugBar/src",
             "Webkul\\SAASCustomizer\\": "packages/Webkul/SAASCustomizer/src",
+            "Webkul\\SAASSubscription\\": "packages/Webkul/SAASSubscription/src",
             "BuyNoir\\SuperFront\\": "packages/BuyNoir/SuperFront/src"
         }
     },

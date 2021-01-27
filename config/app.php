@@ -282,6 +282,7 @@ return [
         Webkul\SocialLogin\Providers\SocialLoginServiceProvider::class,
         Webkul\DebugBar\Providers\DebugBarServiceProvider::class,
         Webkul\SAASCustomizer\Providers\SAASCustomizerServiceProvider::class,
+        Webkul\SAASSubscription\Providers\SAASSubscriptionServiceProvider::class,
         BuyNoir\SuperFront\Providers\SuperFrontServiceProvider::class,
     ],
 

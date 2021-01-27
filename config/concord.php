@@ -37,6 +37,7 @@ return [
         \Webkul\Ui\Providers\ModuleServiceProvider::class,
         \Webkul\User\Providers\ModuleServiceProvider::class,
         \Webkul\Velocity\Providers\ModuleServiceProvider::class,
-        \Webkul\SAASCustomizer\Providers\ModuleServiceProvider::class
+        \Webkul\SAASCustomizer\Providers\ModuleServiceProvider::class,
+        \Webkul\SAASSubscription\Providers\ModuleServiceProvider::class
     ]
 ];
