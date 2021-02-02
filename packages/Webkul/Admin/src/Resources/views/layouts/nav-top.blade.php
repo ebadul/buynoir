@@ -21,7 +21,7 @@
 
     <div class="navbar-top-right">
         <div class="profile">
-              <span class="avatar">
+              <span class="avatar">   
             </span>
 
             <?php $locale = request()->get('admin_locale') ?: app()->getLocale();?>
@@ -30,19 +30,19 @@
                 <div class="dropdown-toggle">
                     <div style="display: inline-block; vertical-align: middle;">
                         <span class="name">
-                            {{ __('admin::app.datagrid.locale') }}
+                            {{ __('admin::app.datagrid.locale') }} 
                         </span>
 
                         @foreach (core()->getAllLocales() as $localeModel)
                             @if ($localeModel->code == $locale)
                                 <span class="role">
-                                    {{ $localeModel->name }}
+                                    {{ $localeModel->name }}   
                                 </span>
                             @endif
                         @endforeach
                         
                     </div>
-                    <i class="icon arrow-down-icon active"></i>
+                    <i class="icon arrow-down-icon active"> </i> 
                 </div>
 
                 <div class="dropdown-list bottom-right">
