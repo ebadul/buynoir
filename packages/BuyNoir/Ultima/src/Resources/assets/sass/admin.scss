@@ -1,0 +1,17 @@
+.ultima-icon {
+    width: 48px;
+    height: 48px;
+    display: inline-block;
+    background-size: cover;
+    background-image: url("../images/ultima-icon.svg");
+}
+
+.active {
+    .ultima-icon {
+        background-image: url("../images/ultima-icon.svg");
+    }
+
+    &.ultima-icon {
+        background-image: url("../images/ultima-icon.svg");
+    }
+}

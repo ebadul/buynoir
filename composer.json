@@ -112,7 +112,8 @@
             "Webkul\\DebugBar\\": "packages/Webkul/DebugBar/src",
             "Webkul\\SAASCustomizer\\": "packages/Webkul/SAASCustomizer/src",
             "Webkul\\SAASSubscription\\": "packages/Webkul/SAASSubscription/src",
-            "BuyNoir\\SuperFront\\": "packages/BuyNoir/SuperFront/src"
+            "BuyNoir\\SuperFront\\": "packages/BuyNoir/SuperFront/src",
+            "BuyNoir\\Ultima\\": "packages/BuyNoir/Ultima/src"
         }
     },
 

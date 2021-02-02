@@ -284,6 +284,7 @@ return [
         Webkul\SAASCustomizer\Providers\SAASCustomizerServiceProvider::class,
         Webkul\SAASSubscription\Providers\SAASSubscriptionServiceProvider::class,
         BuyNoir\SuperFront\Providers\SuperFrontServiceProvider::class,
+        BuyNoir\Ultima\Providers\UltimaServiceProvider::class,
     ],
 
     /*

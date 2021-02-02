@@ -23,6 +23,12 @@ return [
             'name' => 'Velocity',
             'parent' => 'default'
         ],
+        'ultima' => [
+            'views_path' => 'resources/themes/ultima/views',
+            'assets_path' => 'public/themes/ultima/assets',
+            'name' => 'Ultima',
+            'parent' => 'default'
+        ],
     ],
 
     'admin-default' => 'default',

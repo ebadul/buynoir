@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
+  <defs>
+    <style>
+      .cls-1 {
+        font-size: 30px;
+        text-anchor: middle;
+        font-family: Vinegar;
+        text-decoration: underline;
+      }
+    </style>
+  </defs>
+  <text id="U" class="cls-1" x="24" y="33"><tspan x="24">U</tspan></text>
+</svg>
