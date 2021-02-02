@@ -9,13 +9,13 @@
                                 <i class="ei-icon_profile"></i>
                                 @guest('customer')
                                     <a class="unset" href="{{ route('customer.session.index') }}">
-                                    {{ __('velocity::app.responsive.header.greeting', ['customer' => 'Guest']) }}
+                                    {{ __('ultima::app.responsive.header.greeting', ['customer' => 'Guest']) }}
                                     </a>
                                 @endguest
 
                                 @auth('customer')
                                     <a class="unset" href="{{ route('customer.profile.index') }}">
-                                        {{ __('velocity::app.responsive.header.greeting', ['customer' => auth()->guard('customer')->user()->first_name]) }}
+                                        {{ __('ultima::app.responsive.header.greeting', ['customer' => auth()->guard('customer')->user()->first_name]) }}
                                     </a>
                                 @endauth
                                 <span>
