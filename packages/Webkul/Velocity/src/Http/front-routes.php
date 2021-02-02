@@ -14,6 +14,13 @@ Route::group(['middleware' => ['web', 'locale', 'theme', 'currency']], function 
         Route::get('/categories', 'ShopController@fetchCategories')
         ->name('velocity.categoriest');
 
+        Route::get('/guest-wishlist', 'ShopController@getWishlistList')
+        ->name('velocity.product.guest-wishlist')
+        ->defaults('_config', [
+            'view' => 'shop::guest.wishlist.index'
+        ]);
+        
+
         Route::get('/category-details', 'ShopController@categoryDetails')
             ->name('velocity.category.details');
 
