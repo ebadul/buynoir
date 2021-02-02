@@ -37,6 +37,7 @@ class UltimaMetaDataSeeder extends Seeder
         DB::table('core_config')->insert([
             [
                 'code'         => 'general.content.shop.compare_option',
+                'company_id'        => '25',
                 'value'        => '1',
                 'channel_code' => 'default',
                 'locale_code'  => 'en',
@@ -45,6 +46,7 @@ class UltimaMetaDataSeeder extends Seeder
             ],
             [
                 'code'         => 'general.content.shop.compare_option',
+                'company_id'        => '25',
                 'value'        => '1',
                 'channel_code' => 'default',
                 'locale_code'  => 'fr',
@@ -53,6 +55,7 @@ class UltimaMetaDataSeeder extends Seeder
             ],
             [
                 'code'         => 'general.content.shop.compare_option',
+                'company_id'        => '25',
                 'value'        => '1',
                 'channel_code' => 'default',
                 'locale_code'  => 'ar',
@@ -61,6 +64,7 @@ class UltimaMetaDataSeeder extends Seeder
             ],
             [
                 'code'         => 'general.content.shop.compare_option',
+                'company_id'        => '25',
                 'value'        => '1',
                 'channel_code' => 'default',
                 'locale_code'  => 'de',
@@ -69,6 +73,7 @@ class UltimaMetaDataSeeder extends Seeder
             ],
             [
                 'code'         => 'general.content.shop.compare_option',
+                'company_id'        => '25',
                 'value'        => '1',
                 'channel_code' => 'default',
                 'locale_code'  => 'es',
@@ -77,6 +82,7 @@ class UltimaMetaDataSeeder extends Seeder
             ],
             [
                 'code'         => 'general.content.shop.compare_option',
+                'company_id'        => '25',
                 'value'        => '1',
                 'channel_code' => 'default',
                 'locale_code'  => 'fa',
@@ -85,6 +91,7 @@ class UltimaMetaDataSeeder extends Seeder
             ],
             [
                 'code'         => 'general.content.shop.compare_option',
+                'company_id'        => '25',
                 'value'        => '1',
                 'channel_code' => 'default',
                 'locale_code'  => 'it',
@@ -93,6 +100,7 @@ class UltimaMetaDataSeeder extends Seeder
             ],
             [
                 'code'         => 'general.content.shop.compare_option',
+                'company_id'        => '25',
                 'value'        => '1',
                 'channel_code' => 'default',
                 'locale_code'  => 'ja',
@@ -101,6 +109,7 @@ class UltimaMetaDataSeeder extends Seeder
             ],
             [
                 'code'         => 'general.content.shop.compare_option',
+                'company_id'        => '25',
                 'value'        => '1',
                 'channel_code' => 'default',
                 'locale_code'  => 'nl',
@@ -109,6 +118,7 @@ class UltimaMetaDataSeeder extends Seeder
             ],
             [
                 'code'         => 'general.content.shop.compare_option',
+                'company_id'        => '25',
                 'value'        => '1',
                 'channel_code' => 'default',
                 'locale_code'  => 'pl',
@@ -117,6 +127,7 @@ class UltimaMetaDataSeeder extends Seeder
             ],
             [
                 'code'         => 'general.content.shop.compare_option',
+                'company_id'        => '25',
                 'value'        => '1',
                 'channel_code' => 'default',
                 'locale_code'  => 'pt_BR',
@@ -125,6 +136,7 @@ class UltimaMetaDataSeeder extends Seeder
             ],
             [
                 'code'         => 'general.content.shop.compare_option',
+                'company_id'        => '25',
                 'value'        => '1',
                 'channel_code' => 'default',
                 'locale_code'  => 'tr',
