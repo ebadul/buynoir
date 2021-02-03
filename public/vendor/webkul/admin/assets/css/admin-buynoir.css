@@ -253,3 +253,7 @@ div.center-box {
 .buynoir-dashboard-container .dashboard-stats .dashboard-card .data {
     color: #fff;
 }
+
+.buynoir-dashboard-container .dashboard .card {
+    box-shadow: none;
+}
