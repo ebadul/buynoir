@@ -285,6 +285,7 @@ return [
         Webkul\SAASSubscription\Providers\SAASSubscriptionServiceProvider::class,
         BuyNoir\SuperFront\Providers\SuperFrontServiceProvider::class,
         BuyNoir\Ultima\Providers\UltimaServiceProvider::class,
+        Webkul\StripeConnect\Providers\StripeConnectServiceProvider::class
     ],
 
     /*

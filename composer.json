@@ -39,6 +39,7 @@
         "maatwebsite/excel": "3.1.19",
         "paypal/paypal-checkout-sdk": "1.0.1",
         "prettus/l5-repository": "^2.6",
+        "stripe/stripe-php": "^7.69",
         "tymon/jwt-auth": "^1.0.0"
     },
 
@@ -113,7 +114,8 @@
             "Webkul\\SAASCustomizer\\": "packages/Webkul/SAASCustomizer/src",
             "Webkul\\SAASSubscription\\": "packages/Webkul/SAASSubscription/src",
             "BuyNoir\\SuperFront\\": "packages/BuyNoir/SuperFront/src",
-            "BuyNoir\\Ultima\\": "packages/BuyNoir/Ultima/src"
+            "BuyNoir\\Ultima\\": "packages/BuyNoir/Ultima/src",
+            "Webkul\\StripeConnect\\": "packages/Webkul/StripeConnect/src"
         }
     },
 
