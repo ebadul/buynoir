@@ -28,3 +28,7 @@ a:link,
 a:visited {
     color: #aa5352 !important;
 }
+
+.buynoir-dashboard-container .dashboard .card {
+    box-shadow: none;
+}
