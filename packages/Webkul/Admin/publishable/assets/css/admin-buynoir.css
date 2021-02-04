@@ -257,3 +257,7 @@ div.center-box {
 .buynoir-dashboard-container .dashboard .card {
     box-shadow: none;
 }
+
+.buynoir-navbar-left li.active {
+    background-color: #fdf4f0;
+}

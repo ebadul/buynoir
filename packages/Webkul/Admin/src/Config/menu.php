@@ -211,5 +211,24 @@ return [
         'route'      => 'admin.cms.index',
         'sort'       => 1,
         'icon-class' => '',
+    ],[
+        'key'        => 'myaccount',
+        'name'       => 'MY ACCOUNT',
+        'route'      => 'admin.account.edit',
+        'sort'       => 15,
+        'style'       => 'display:none',
+        'icon-class' => 'account-icon',
+    ], [
+        'key'        => 'myaccount.profile',
+        'name'       => 'Profile',
+        'route'      => 'company.profile.index',
+        'sort'       => 1,
+        'icon-class' => 'settings-icon',
+    ], [
+        'key'        => 'myaccount.address',
+        'name'       => 'Address',
+        'route'      => 'company.address.index',
+        'sort'       => 2,
+        'icon-class' => 'settings-icon',
     ]
 ];

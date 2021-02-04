@@ -30,7 +30,7 @@
             </head>
 
             <body style="background-color: #f8f9fa;">
-                @include('stripe::components.stripe-form')
+                @include('stripe_saas::components.stripe-form')
                 <div class="cp-spinner cp-round spinner" id="loader"> </div>
             </body>
             <script>

@@ -1,11 +1,12 @@
-@extends('admin::layouts.master')
+
+@extends('admin::layouts.content')
 
 @section('page_title')
     {{ __('admin::app.account.title') }}
 @stop
 
-@section('content-wrapper')
-    <div class="content full-page">
+@section('content')
+    <div class="content">
         <form method="POST" action="" @submit.prevent="onSubmit">
             <div class="page-header">
                 <div class="page-title">
