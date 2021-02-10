@@ -49,6 +49,7 @@ body {
 
 .buynoir-navbar-left {
     width: 180px;
+    overflow-y: auto;
 }
 
 .buynoir-navbar-left ul.menubar li.menu-item span {
@@ -260,4 +261,9 @@ div.center-box {
 
 .buynoir-navbar-left li.active {
     background-color: #fdf4f0;
+}
+
+.buynoir-form-login label {
+    font-size: 25px;
+    color: #efa;
 }

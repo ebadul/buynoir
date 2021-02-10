@@ -52,7 +52,13 @@
         <div id="content">
             <section class="section_account section-registration">
                 <div class="container-fluid">
+                     
+                      
+                     
                   <div class="row ">
+                    <div class="col-12 text-right pt-3">
+                        <a href="{{config('app.url')}}" class="btn outline btn-lg"><i class="icon cross-icon"></i></a>
+                    </div>
                     {{--  <div class="col-md-4 col-lg-4">
                       <div class="fixed_side_data">
                         <div class="head_nav">

@@ -66,6 +66,72 @@
             .btn.btn-primary {
                 width: 100%;
             }
+
+            .buynoir-panel form.buynoir-form-login label{
+                font-size:25px;
+                color:#aa5352;
+                font-weight:bold;
+                width:100%;
+                margin-top:30px;
+                margin-bottom:15px;
+            }
+
+            .buynoir-panel form.buynoir-form-login input{
+                font-size:15px;
+                color:#000 !important;
+                font-weight:bold;
+                width:100%;
+                margin-bottom:5px;
+                padding:17px !important;
+                height: 50px;
+            }
+            .buynoir-panel form.buynoir-form-login input{
+                font-size:15px;
+                color:#000 !important;
+                font-weight:bold;
+                width:100%;
+                margin-bottom:5px;
+                padding:17px !important;
+                height: 50px;
+            }
+
+                  .buynoir-panel form.buynoir-form-login input::placeholder{
+                font-size:15px;
+                color:#000 !important;
+                
+            }
+
+            
+
+            .buynoir-panel form.buynoir-form-login a,
+            .buynoir-panel form.buynoir-form-login a:visited{
+                  font-size:25px;
+                color:#aa5352;
+                font-weight:bold;
+            }
+
+            .buynoir-panel form.buynoir-form-login button{
+                width:50%;
+                box-shadow:none;
+                font-size:20px;
+                margin-top:15px;
+            }
+
+            .adjacent-center{
+                width:450px;
+            }
+
+            .buynoir-panel{
+                padding:20px;
+            }
+
+           .buynoir-panel .control-group .control {
+               border:2px solid #aa5352;
+           }
+
+           #buynoir-panel-login{
+               border:2.5px solid #aa5352;
+           }
         </style>
 
         @yield('css')

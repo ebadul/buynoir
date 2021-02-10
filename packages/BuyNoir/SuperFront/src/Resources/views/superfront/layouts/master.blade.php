@@ -75,7 +75,9 @@
                 @endif  --}}
 
                 <div class="content-container">
+                <div class="row">
                     @yield('content-wrapper')
+                </div>
                 </div>
             </div>
             

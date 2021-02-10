@@ -14,6 +14,7 @@ use Webkul\Product\Repositories\ProductImageRepository;
 use Webkul\Product\Repositories\ProductVideoRepository;
 use Webkul\Product\Repositories\ProductInventoryRepository;
 use Webkul\Product\Repositories\ProductAttributeValueRepository;
+use Webkul\BookingProduct\Repositories\BookingProductRepository;
 
 abstract class AbstractType
 {
@@ -23,6 +24,9 @@ abstract class AbstractType
      * @var \Webkul\Attribute\Repositories\AttributeRepository
      */
     protected $attributeRepository;
+
+
+    protected $bookingProductRepository;
 
     /**
      * ProductRepository instance
@@ -721,12 +725,31 @@ abstract class AbstractType
      */
     public function getPriceHtml()
     {
+        $html="";
         if ($this->haveSpecialPrice()) {
             $html = '<div class="sticker sale">' . trans('shop::app.products.sale') . '</div>'
                 . '<span class="regular-price">' . core()->currency($this->product->price) . '</span>'
                 . '<span class="special-price">' . core()->currency($this->getSpecialPrice()) . '</span>';
         } else {
-            $html = '<span>' . core()->currency($this->product->price) . '</span>';
+
+            if($this->product->type==="booking"){
+                
+                $bookingProduct = $this->bookingProductRepository->findOneByField('product_id', $this->product->id);
+
+                $rentingType = $bookingProduct->rental_slot->renting_type;
+
+                if ($rentingType == 'daily') {
+                    $price = $bookingProduct->rental_slot->daily_price ;
+                    $html .= '<span class=abstract>Daily: ' . core()->currency($price) . '</span>&nbsp;';
+                } else {
+                    $price = $bookingProduct->rental_slot->hourly_price ;
+                    $html .= '&nbsp;<span class=abstract>Hourly: ' . core()->currency($price) . '</span>';
+                }
+               
+            }else{
+                $html = '<span class=abstract>' . core()->currency($this->product->price) . '</span>';
+            }
+
         }
 
         return $html;

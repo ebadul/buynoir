@@ -49,6 +49,7 @@ body {
 
 .buynoir-navbar-left {
     width: 180px;
+    overflow-y: auto;
 }
 
 .buynoir-navbar-left ul.menubar li.menu-item span {
