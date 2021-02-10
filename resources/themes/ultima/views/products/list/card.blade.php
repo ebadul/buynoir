@@ -34,8 +34,8 @@
             <div class="product-image">
                 <a
                     title="{{ $product->name }}"
-                    href="{{ route('shop.productOrCategory.index', $product->url_key) }}">
-
+                    href="{{ route('shop.productOrCategory.index', empty($product->url_key)?'':$product->url_key) }}">
+  
                     <img
                         src="{{ $productBaseImage['medium_image_url'] }}"
                         :onerror="`this.src='${this.$root.baseUrl}/vendor/webkul/ui/assets/images/product/large-product-placeholder.png'`" />
@@ -46,7 +46,7 @@
                 <div>
                     <div class="product-name">
                         <a
-                            href="{{ route('shop.productOrCategory.index', $product->url_key) }}"
+                            href="{{ route('shop.productOrCategory.index', empty($product->url_key)?'':$product->url_key) }}"
                             title="{{ $product->name }}" class="unset">
 
                             <span class="product-name-title">{{ $product->name }}</span>
@@ -78,7 +78,7 @@
     @else
         <div class="card grid-card product-card-new col-lg-4">
             <a
-                href="{{ route('shop.productOrCategory.index', $product->url_key) }}"
+                href="{{ route('shop.productOrCategory.index', empty($product->url_key)?'':$product->url_key) }}"
                 title="{{ $product->name }}"
                 class="product-image-container">
 
@@ -95,7 +95,7 @@
             <div class="card-body">
                 <div class="product-name col-12 px-0">
                     <a
-                        href="{{ route('shop.productOrCategory.index', $product->url_key) }}"
+                        href="{{ route('shop.productOrCategory.index', empty($product->url_key)?'':$product->url_key) }}"
                         title="{{ $product->name }}"
                         class="unset">
 
