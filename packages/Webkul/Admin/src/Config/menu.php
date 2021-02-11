@@ -105,7 +105,7 @@ return [
         'icon-class' => 'configuration-icon',
     ], [
         'key'        => 'settings',
-        'name'       => 'admin::app.layouts.settings',
+        'name'       => 'admin::app.layouts.admin-settings',
         'route'      => 'admin.locales.index',
         'sort'       => 6,
         'icon-class' => 'settings-icon',
@@ -201,7 +201,7 @@ return [
         'icon-class' => '',
     ], [
         'key'        => 'cms',
-        'name'       => 'admin::app.layouts.cms',
+        'name'       => 'admin::app.layouts.admin-cms',
         'route'      => 'admin.cms.index',
         'sort'       => 5,
         'icon-class' => 'cms-icon',
