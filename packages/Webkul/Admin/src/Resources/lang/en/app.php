@@ -63,7 +63,7 @@ return [
         'reviews' => 'Reviews',
         'newsletter-subscriptions' => 'Newsletter Subscriptions',
         'configure' => 'Configure',
-        'admin-settings' => 'Business Operations',
+        'admin-settings' => 'Business Oper.',
         'locales' => 'Locales',
         'currencies' => 'Currencies',
         'exchange-rates' => 'Exchange Rates',
