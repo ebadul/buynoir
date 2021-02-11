@@ -18,7 +18,7 @@
                     @csrf
 
                     <div class="control-group " :class="[errors.has('email') ? 'has-error' : '']">
-                        <label class="login-email" for="email">{{ __('admin::app.users.sessions.email') }}</label>
+                        <label class="login-email" for="email">{{ __('admin::app.users.sessions.emails') }}</label>
                         <input type="text" v-validate="'required|email'" class="control" id="email" name="email" data-vv-as="&quot;{{ __('admin::app.users.sessions.email') }}&quot;" placeholder="{{ __('admin::app.users.sessions.email-label') }}" />
                         <span class="control-error" v-if="errors.has('email')">@{{ errors.first('email') }}</span>
                     </div>
