@@ -302,6 +302,7 @@ return [
             'activate-warning' => 'Your account is yet to be activated, please contact administrator.'
         ],
 
+        
         'sessions' => [
             'title' => 'Sign In',
             'email' => 'Sign in to your shop',

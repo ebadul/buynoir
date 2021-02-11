@@ -22,7 +22,7 @@
                         <input type="text" v-validate="'required|email'" class="control" id="email" name="email" data-vv-as="&quot;{{ __('admin::app.users.sessions.email') }}&quot;" placeholder="{{ __('admin::app.users.sessions.email-label') }}" />
                         <span class="control-error" v-if="errors.has('email')">@{{ errors.first('email') }}</span>
                     </div>
-
+   
                     <div class="control-group" :class="[errors.has('password') ? 'has-error' : '']">
                         {{--  <label for="password">{{ __('admin::app.users.sessions.password') }}</label>  --}}
                         <input type="password" v-validate="'required|min:6'" class="control" id="password" name="password" data-vv-as="&quot;{{ __('admin::app.users.sessions.password') }}&quot;" value=""  placeholder="{{ __('admin::app.users.sessions.password') }}"/>
