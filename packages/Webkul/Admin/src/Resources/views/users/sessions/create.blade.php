@@ -33,7 +33,7 @@
                         <a href="{{ route('admin.forget-password.create') }}">{{ __('admin::app.users.sessions.forget-password-link-title') }}</a>
                     </div>
 
-                    <div class="button-group" style="text-align:center">
+                    <div class="button-group" style="text-align:center;margin-bottom:0px;">
                         <button class="btn btn-xl btn-primary">{{ __('admin::app.users.sessions.submit-btn-title') }}</button>
                     </div>
                 </form>

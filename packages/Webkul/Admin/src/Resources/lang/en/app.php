@@ -77,7 +77,7 @@ return [
         'tax-rates' => 'Tax Rates',
         'promotions' => 'Promotions',
         'discount' => 'Discount',
-        'cms' => 'Web Pages'
+        'cms' => 'Web Pages '
     ],
 
     'acl' => [

@@ -68,11 +68,11 @@
             }
 
             .buynoir-panel form.buynoir-form-login label{
-                font-size:25px;
+                font-size:20px;
                 color:#aa5352;
                 font-weight:bold;
                 width:100%;
-                margin-top:30px;
+                margin-top:0px;
                 margin-bottom:15px;
             }
 
