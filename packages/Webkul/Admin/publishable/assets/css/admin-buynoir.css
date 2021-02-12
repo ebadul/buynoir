@@ -223,7 +223,7 @@ div.center-box {
     box-shadow: none;
     background: #fdf4f0;
     border: 1px solid #aa5352;
-    border-radius: none;
+    border-radius: 0px;
 }
 
 #buynoir-panel-login .btn-primary {
