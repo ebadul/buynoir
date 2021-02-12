@@ -216,13 +216,14 @@ body {
 /*** admin login ****/
 
 div.center-box {
-    background: #fdf4f0;
+    background: #fff;
 }
 
 #buynoir-panel-login {
     box-shadow: none;
-    background: #fae3da;
+    background: #fdf4f0;
     border: 1px solid #aa5352;
+    border-radius: none;
 }
 
 #buynoir-panel-login .btn-primary {

@@ -5,6 +5,7 @@ return [
         'key' => 'company',
         'name' => 'saas::app.admin.tenant.company',
         'route' => 'company.profile.index',
+        'style' => 'display:none',
         'sort' => 8,
         'icon-class' => 'customer-icon',
     ], [

@@ -244,7 +244,7 @@ return [
 
     'users' => [
         'forget-password' => [
-            'title' => 'Forget Password',
+            'title' => 'Forgot Password',
             'header-title' => 'Recover Password',
             'email' => 'Registered Email',
             'password' => 'Password',
@@ -308,7 +308,7 @@ return [
             'emails' => 'Sign in to your shop',
             'email-label' => 'Email Address',
             'password' => 'Password',
-            'forget-password-link-title' => 'Forget Password ?',
+            'forget-password-link-title' => 'Forgot Password ?',
             'remember-me' => 'Remember Me',
             'submit-btn-title' => 'Sign In'
         ]
