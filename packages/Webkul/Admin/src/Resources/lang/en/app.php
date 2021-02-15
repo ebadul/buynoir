@@ -308,7 +308,7 @@ return [
             'emails' => 'Sign in to your shop',
             'email-label' => 'Email Address',
             'password' => 'Password',
-            'forget-password-link-title' => 'Forgot Password ?',
+            'forget-password-link-titles' => 'Forgot Password ?',
             'remember-me' => 'Remember Me',
             'submit-btn-title' => 'Sign In'
         ]

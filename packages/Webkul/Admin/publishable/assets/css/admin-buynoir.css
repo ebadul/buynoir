@@ -271,3 +271,7 @@ div.center-box {
     font-size: 25px;
     color: #efa;
 }
+
+#buynoir-panel-login input:-internal-autofill-selected {
+    background-color: #fff;
+}

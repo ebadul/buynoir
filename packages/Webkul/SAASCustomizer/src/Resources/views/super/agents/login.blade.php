@@ -34,7 +34,7 @@
                 </div>
 
                 <div class="control-group">
-                    <a href="{{ route('super.forget-password.create') }}">{{ __('saas::app.super-user.settings.agents.sign-in.forget-password-link-title') }}</a>
+                    <a href="{{ route('super.forget-password.create') }}">{{ __('saas::app.super-user.settings.agents.sign-in.forget-password-link-titles') }}</a>
                 </div>
 
                 <div class="button-group">

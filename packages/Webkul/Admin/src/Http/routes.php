@@ -581,7 +581,7 @@ Route::group(['middleware' => ['web', 'admin_locale']], function () {
                 'view' => 'admin::account.edit',
             ])->name('admin.account.edit');
 
-            Route::put('/account', 'Webkul\User\Http\Controllers\AccountController@update')->name('admin.account.update');
+            Route::post('/account', 'Webkul\User\Http\Controllers\AccountController@update')->name('admin.account.update');
 
 
             // Admin Store Front Settings Route
