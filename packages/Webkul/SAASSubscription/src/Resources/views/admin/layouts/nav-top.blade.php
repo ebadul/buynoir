@@ -1,4 +1,4 @@
-<div class="navbar-top">
+<div class="navbar-top buynoir-navbar subscription">
     {{--  <div class="navbar-top-left">
         <div class="brand-logo">
             <a href="{{ route('admin.dashboard.index') }}">

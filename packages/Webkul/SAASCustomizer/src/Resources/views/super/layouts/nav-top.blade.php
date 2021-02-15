@@ -1,4 +1,4 @@
-<div class="navbar-top">
+<div class="navbar-top buynoir-navbar saascustomizer">
 
     {{--  <div class="navbar-top-left">
         <div class="brand-logo">
@@ -31,7 +31,7 @@
             </a> 
         </div> 
     </div> 
-    
+
     <div class="navbar-top-right">
         <div class="profile" style="padding-top: 5px;">
             @if(auth()->guard('super-admin')->check() && ! request()->is('company/*'))
