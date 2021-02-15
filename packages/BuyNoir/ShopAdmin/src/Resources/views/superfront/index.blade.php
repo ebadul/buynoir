@@ -68,8 +68,7 @@
                         Sell and Grow
                       </h1>
                       <p>
-                        Velit sed ullamcorper morbi tincidunt ornare. Ipsum consequat nisl vel pretium. Odio ut sem nulla
-                        pharetra diam sit. Amet est placerat in egestas erat imperdiet sed euismod.
+                        
                       </p>
                       <a href="{{route('company.create.index')}}" class="btn btn_lg_primary bg-green2 c-white sweep_top sweep_letter rounded-12">
                         <div class="inside_item">
