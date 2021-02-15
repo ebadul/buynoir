@@ -20,7 +20,7 @@
                         {{ __('admin::app.save') }}
                     </button>
                 </div>
-            </div>
+         
 
             <div class="page-content">
 
