@@ -1,5 +1,5 @@
 <div class="navbar-top">
-    <div class="navbar-top-left">
+    {{--  <div class="navbar-top-left">
         <div class="brand-logo">
             <a href="{{ route('admin.dashboard.index') }}">
                 @if (core()->getConfigData('general.design.admin_logo.logo_image'))
@@ -9,7 +9,25 @@
                 @endif
             </a>
         </div>
+    </div>  --}}
+    <div class="navbar-top-left"> 
+        <div class="search-bar"> 
+            <i class="icon search-icon"></i> 
+            <input type="text" class="form-control"> 
+        </div>
     </div>
+
+    <div class="navbar-top-middle"> 
+        <div class="brand-logo"> 
+            <a href="{{ route('admin.dashboard.index') }}">
+                @if (core()->getConfigData('general.design.admin_logo.logo_image'))
+                    <img src="{{ \Illuminate\Support\Facades\Storage::url(core()->getConfigData('general.design.admin_logo.logo_image')) }}" alt="{{ config('app.name') }}" style="height: 40px; width: 110px;"/>
+                @else
+                    <img src="{{ asset('vendor/webkul/ui/assets/images/logo-white.png') }}" alt="{{ config('app.name') }}"/>
+                @endif
+            </a> 
+        </div> 
+    </div> 
 
     <div class="navbar-top-right">
         <div class="profile">
