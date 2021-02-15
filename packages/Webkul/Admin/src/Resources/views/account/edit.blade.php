@@ -25,7 +25,7 @@
             <div class="page-content">
 
                 <div class="form-container">
-                    @csrf()
+                    @csrf
 
                     <input name="_method" type="hidden" value="PUT">
 
