@@ -18,6 +18,8 @@ body {
     background-color: #000;
     color: #fff;
     width: 33.33%;
+    display: inline-block;
+    vertical-align: middle;
 }
 
 .buynoir-navbar .navbar-top-right .profile-info span.name,
