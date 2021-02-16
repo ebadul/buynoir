@@ -95,10 +95,9 @@
             <div class="card-body">
                 <div class="product-name col-12 px-0">
                     <a
-                        href="{{ route('shop.productOrCategory.index', empty($product->url_key)?$product->name:$product->url_key) }}"
+                        href="{{ route('shop.productOrCategory.index', empty($product->url_key)?'':$product->url_key) }}"
                         title="{{ $product->name }}"
                         class="unset">
-
                         <span class="fs16">{{ $product->name }}</span>
                     </a>
                 </div>
