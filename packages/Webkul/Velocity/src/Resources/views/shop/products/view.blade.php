@@ -53,7 +53,7 @@
 
     <meta property="og:description" content="{{ $product->description }}" />
 
-    <meta property="og:url" content="{{ route('shop.productOrCategory.index', $product->url_key) }}" />
+    <meta property="og:url" content="{{ route('shop.productOrCategory.index', empty($product->url_key)?$product->name:$product->url_key) }}" />
 @stop
 
 @push('css')
@@ -237,7 +237,7 @@
             },
 
             mounted: function () {
-                let currentProductId = '{{ $product->url_key }}';
+                let currentProductId = '{{ empty($product->url_key)?$product->name:$product->url_key }}';
                 let existingViewed = window.localStorage.getItem('recentlyViewed');
 
                 if (! existingViewed) {

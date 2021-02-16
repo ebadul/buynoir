@@ -67,7 +67,7 @@
                                             <a
                                                 title="{{ $product->name }}"
                                                 class="product-image-container col-2"
-                                                href="{{ route('shop.productOrCategory.index', $product->url_key) }}">
+                                                href="{{ route('shop.productOrCategory.index', empty($product->url_key)?$product->name:$product->url_key) }}">
 
                                                 <img
                                                     class="card-img-top"
@@ -79,7 +79,7 @@
                                             <div class="product-details-content py-3 col-6 pr0">
                                                 <div class="row item-title no-margin">
                                                     <a
-                                                        href="{{ route('shop.productOrCategory.index', $product->url_key) }}"
+                                                        href="{{ route('shop.productOrCategory.index', empty($product->url_key)?$product->name:$product->url_key) }}"
                                                         title="{{ $product->name }}"
                                                         class="unset col-12 no-padding">
 
@@ -163,7 +163,7 @@
                                             <a
                                                 title="{{ $product->name }}"
                                                 class="product-image-container col-2"
-                                                href="{{ route('shop.productOrCategory.index', $product->url_key) }}">
+                                                href="{{ route('shop.productOrCategory.index', empty($product->url_key)?$product->name:$product->url_key) }}">
 
                                                 <img
                                                     src="{{ $productBaseImage['medium_image_url'] }}"
@@ -173,7 +173,7 @@
 
                                             <div class="col-10 pr0 item-title">
                                                 <a
-                                                    href="{{ route('shop.productOrCategory.index', $product->url_key) }}"
+                                                    href="{{ route('shop.productOrCategory.index', empty($product->url_key)?$product->name:$product->url_key) }}"
                                                     title="{{ $product->name }}"
                                                     class="unset col-12 no-padding">
 

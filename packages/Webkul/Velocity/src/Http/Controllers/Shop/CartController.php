@@ -106,7 +106,7 @@ class CartController extends Controller
             $response = [
                 'status'           => 'danger',
                 'message'          => __($exception->getMessage()),
-                'redirectionRoute' => route('shop.productOrCategory.index', $product->url_key),
+                'redirectionRoute' => route('shop.productOrCategory.index', empty($product->url_key)?$product->name:$product->url_key),
             ];
         }
 

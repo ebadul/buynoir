@@ -187,7 +187,7 @@
                                                   <div class="control-group" :class="[errors.has('step-three.username') ? 'has-error' : '']">
                                                       {{-- <label for="username" class="required">User Name</label> --}}
 
-                                                      <input type="text" class="control" name="username" v-model="username" placeholder="{{ __('saas::app.tenant.registration.username') }}" v-validate="'required|alpha_num'" data-vv-as="&quot;{{ __('saas::app.tenant.registration.username') }}&quot;">
+                                                      <input type="text" class="control" name="username" v-model="username" placeholder="{{ __('saas::app.tenant.registration.username') }}" v-validate="'required|alpha_spaces'" data-vv-as="&quot;{{ __('saas::app.tenant.registration.username') }}&quot;">
 
                                                       <span class="control-error" v-show="errors.has('step-three.username')">@{{ errors.first('step-three.username') }}</span>
                                                   </div>
@@ -348,8 +348,10 @@
                                           catchResponseThree () {
                                               this.createdclicked = true;
                                               var o_this = this;
+                                              var storeNameTmp = this.username.replace(' ',''); 
+                                              console.log("store name::", storeNameTmp)
                                               axios.post('{{ route('company.validate.step-three') }}', {
-                                                  username: this.username,
+                                                  username: storeNameTmp,
                                                   productcategory: this.productcategory,
                                               }).then(function (response) {
                                                   o_this.errors.clear();
@@ -368,7 +370,7 @@
 
                                           sendDataToServer () {
                                               var o_this = this;
-
+                                              var usernameTm = this.username.replace(' ','');
                                               return axios.post('{{ route('company.create.store') }}', {
                                                   email: this.email,
                                                   first_name: this.first_name,
@@ -378,7 +380,7 @@
                                                   password_confirmation: this.password_confirmation,
                                                   name: "BuyNoir-"+this.username,
                                                   productcategory: this.productcategory,
-                                                  username: this.username,
+                                                  username: usernameTm,
                                                   elsebusinessStart: this.elsebusinessStart
                                               }).then(function (response) {
                                                   window.location.href = response.data.redirect;

@@ -292,7 +292,7 @@ class Helper extends Review
             'itemId'    => $item->id,
             'name'      => $item->name,
             'quantity'  => $item->quantity,
-            'url_key'   => $product->url_key,
+            'url_key'   => empty($product->url_key)?$product->name:$product->url_key,
             'baseTotal' => core()->currency($item->base_total),
         ];
     }
@@ -340,7 +340,7 @@ class Helper extends Review
             'new'               => $isProductNew,
             'galleryImages'     => $galleryImages,
             'name'              => $product->name,
-            'slug'              => $product->url_key,
+            'slug'              => empty($product->url_key)?$product->name:$product->url_key,
             'description'       => $product->description,
             'shortDescription'  => $product->short_description,
             'firstReviewText'   => trans('velocity::app.products.be-first-review'),
@@ -390,7 +390,7 @@ class Helper extends Review
                     ]);
 
                     $productMetaDetails = [];
-                    $productMetaDetails['slug'] = $product->url_key;
+                    $productMetaDetails['slug'] = empty($product->url_key)?$product->name:$product->url_key;
                     $productMetaDetails['product_image'] = $formattedProduct['image'];
                     $productMetaDetails['priceHTML'] = $formattedProduct['priceHTML'];
                     $productMetaDetails['new'] = $formattedProduct['new'];

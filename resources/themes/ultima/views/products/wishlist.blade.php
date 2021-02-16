@@ -33,7 +33,7 @@
             text="{{ $text ?? null }}"
             product-id="{{ $product->id }}"
             item-id="{{ $item->id ?? null}}"
-            product-slug="{{ $product->url_key }}"
+            product-slug="{{ empty($product->url_key)?$product->name:$product->url_key }}"
             add-class="{{ $addWishlistClass ?? '' }}"
             move-to-wishlist="{{ $isMoveToWishlist ?? null}}"
             added-text="{{ __('shop::app.customer.account.wishlist.add') }}"

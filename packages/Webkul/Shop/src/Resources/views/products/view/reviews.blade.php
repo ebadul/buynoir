@@ -34,7 +34,7 @@
             </div>
 
             @if (core()->getConfigData('catalog.products.review.guest_review') || auth()->guard('customer')->check())
-                <a href="{{ route('shop.reviews.create', $product->url_key) }}" class="btn btn-lg btn-primary">
+                <a href="{{ route('shop.reviews.create', empty($product->url_key)?$product->name:$product->url_key) }}" class="btn btn-lg btn-primary">
                     {{ __('shop::app.products.write-review-btn') }}
                 </a>
             @endif
@@ -77,7 +77,7 @@
                 </div>
             @endforeach
 
-            <a href="{{ route('shop.reviews.index', $product->url_key) }}" class="view-all">
+            <a href="{{ route('shop.reviews.index', empty($product->url_key)?$product->name:$product->url_key) }}" class="view-all">
                 {{ __('shop::app.products.view-all') }}
             </a>
 
@@ -87,7 +87,7 @@
     @if (core()->getConfigData('catalog.products.review.guest_review') || auth()->guard('customer')->check())
         <div class="rating-reviews">
             <div class="rating-header">
-                <a href="{{ route('shop.reviews.create', $product->url_key) }}" class="btn btn-lg btn-primary">
+                <a href="{{ route('shop.reviews.create', empty($product->url_key)?$product->name:$product->url_key) }}" class="btn btn-lg btn-primary">
                     {{ __('shop::app.products.write-review-btn') }}
                 </a>
             </div>

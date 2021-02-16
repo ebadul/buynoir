@@ -94,7 +94,7 @@ class CartController extends Controller
             Log::error('Shop CartController: ' . $e->getMessage(),
                 ['product_id' => $id, 'cart_id' => cart()->getCart() ?? 0]);
 
-            return redirect()->route('shop.productOrCategory.index', $product->url_key);
+            return redirect()->route('shop.productOrCategory.index', empty($product->url_key)?$product->name:$product->url_key);
         }
 
         return redirect()->back();

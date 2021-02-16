@@ -17,13 +17,13 @@
 
             <div class="product-info">
                 <div class="product-image">
-                    <a href="{{ route('shop.productOrCategory.index', $product->url_key) }}" title="{{ $product->name }}">
+                    <a href="{{ route('shop.productOrCategory.index', empty($product->url_key)?$product->name:$product->url_key) }}" title="{{ $product->name }}">
                         <img src="{{ $productBaseImage['medium_image_url'] }}" alt="" />
                     </a>
                 </div>
 
                 <div class="product-name mt-20">
-                    <a href="{{ route('shop.productOrCategory.index', $product->url_key) }}" title="{{ $product->name }}">
+                    <a href="{{ route('shop.productOrCategory.index', empty($product->url_key)?$product->name:$product->url_key) }}" title="{{ $product->name }}">
                         <span>{{ $product->name }}</span>
                     </a>
                 </div>
@@ -42,7 +42,7 @@
                     <span> {{ __('shop::app.reviews.rating-reviews') }} </span>
 
                     @if (core()->getConfigData('catalog.products.review.guest_review') || auth()->guard('customer')->check())
-                        <a href="{{ route('shop.reviews.create', $product->url_key) }}" class="btn btn-lg btn-primary right">
+                        <a href="{{ route('shop.reviews.create', empty($product->url_key)?$product->name:$product->url_key) }}" class="btn btn-lg btn-primary right">
                             {{ __('shop::app.products.write-review-btn') }}
                         </a>
                     @endif

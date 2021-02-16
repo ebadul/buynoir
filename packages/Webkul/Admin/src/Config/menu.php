@@ -219,16 +219,22 @@ return [
         'style'       => 'display:none',
         'icon-class' => 'account-icon',
     ], [
+        'key'        => 'myaccount.account',
+        'name'       => 'MY ACCOUNT',
+        'route'      => 'admin.account.edit',
+        'sort'       => 1,
+        'icon-class' => 'settings-icon',
+    ], [
         'key'        => 'myaccount.profile',
         'name'       => 'Profile',
         'route'      => 'company.profile.index',
-        'sort'       => 1,
+        'sort'       => 2,
         'icon-class' => 'settings-icon',
     ], [
         'key'        => 'myaccount.address',
         'name'       => 'Address',
         'route'      => 'company.address.index',
-        'sort'       => 2,
+        'sort'       => 3,
         'icon-class' => 'settings-icon',
     ]
 ];

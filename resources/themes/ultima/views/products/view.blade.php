@@ -215,7 +215,7 @@
 
             mounted: function () {
                 // this.open360View();
-                let currentProductId = '{{ $product->url_key }}';
+                let currentProductId = '{{ empty($product->url_key)?$product->name:$product->url_key }}';
                 let existingViewed = window.localStorage.getItem('recentlyViewed');
 
                 if (! existingViewed) {

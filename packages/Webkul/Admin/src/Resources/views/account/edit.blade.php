@@ -7,21 +7,22 @@
 @section('content')
 
     <div class="content">
-        
+        <form method="POST" action="" @submit.prevent="onSubmit">
             <div class="page-header">
                 <div class="page-title">
                     <h1>
                         {{ __('admin::app.account.title') }}
                     </h1>
                 </div>
-<form method="POST" action="" @submit.prevent="onSubmit">
+            
+        
                 <div class="page-action">
                     <button type="submit" class="btn btn-lg btn-primary">
                         {{ __('admin::app.save') }}
                     </button>
                 </div>
          
-
+            </div>
             <div class="page-content">
 
                 <div class="form-container">
@@ -63,11 +64,11 @@
 
                     <accordian :title="'{{ __('admin::app.account.current-password') }}'" :active="true">
                         <div slot="body">
-                        <div class="control-group" :class="[errors.has('current_password') ? 'has-error' : '']">
-                            <label for="current_password">{{ __('admin::app.account.current-password') }}</label>
-                            <input type="password" v-validate="'required|min:6'" class="control" id="current_password" name="current_password" data-vv-as="&quot;{{ __('admin::app.account.current-password') }}&quot;"/>
-                            <span class="control-error" v-if="errors.has('current_password')">@{{ errors.first('current_password') }}</span>
-                        </div>
+                            <div class="control-group" :class="[errors.has('current_password') ? 'has-error' : '']">
+                                <label for="current_password">{{ __('admin::app.account.current-password') }}</label>
+                                <input type="password" v-validate="'required|min:6'" class="control" id="current_password" name="current_password" data-vv-as="&quot;{{ __('admin::app.account.current-password') }}&quot;"/>
+                                <span class="control-error" v-if="errors.has('current_password')">@{{ errors.first('current_password') }}</span>
+                            </div>
                         </div>
                     </accordian>
                 </div>

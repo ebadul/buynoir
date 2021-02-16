@@ -35,7 +35,7 @@
 
     <meta property="og:description" content="{!! htmlspecialchars(trim(strip_tags($product->description))) !!}" />
 
-    <meta property="og:url" content="{{ route('shop.productOrCategory.index', $product->url_key) }}" />
+    <meta property="og:url" content="{{ route('shop.productOrCategory.index', empty($product->url_key)?$product->name:$product->url_key) }}" />
 @stop
 
 @section('content-wrapper')

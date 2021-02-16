@@ -135,9 +135,9 @@
 
                 data: () => ({
                     data_seed_url: @json(route('company.create.data')),
-                    step_one: true,
+                    step_one: false,
                     step_two: false,
-                    step_three: false,
+                    step_three: true,
                     email: null,
                     password: null,
                     password_confirmation: null,

@@ -39,7 +39,7 @@ class BookingProductEventTicketCest
                 ['booking_product_id' => $bookingProduct->id], $scenario['ticket'])
         );
 
-        $I->amOnPage($product->url_key);
+        $I->amOnPage(empty($product->url_key)?$product->name:$product->url_key);
 
         $I->see(core()->currency($ticket->price), '//span[@class="regular-price"]');
         $I->see(__('bookingproduct::app.shop.products.per-ticket-price', ['price' => core()->currency($ticket->special_price)]),

@@ -65,12 +65,12 @@
 
                                             $productPrice = $product->getTypeInstance()->getProductPrices();
 
-                                            if (is_null ($product->url_key)) {
+                                            if (is_null (empty($product->url_key)?$product->name:$product->url_key)) {
                                                 if (! is_null($product->parent)) {
                                                     $url_key = $product->parent->url_key;
                                                 }
                                             } else {
-                                                $url_key = $product->url_key;
+                                                $url_key = empty($product->url_key)?$product->name:$product->url_key;
                                             }
 
                                         @endphp

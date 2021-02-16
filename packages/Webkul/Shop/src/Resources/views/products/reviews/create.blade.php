@@ -15,13 +15,13 @@
                 <?php $productBaseImage = $productImageHelper->getProductBaseImage($product); ?>
 
                 <div class="product-image">
-                    <a href="{{ route('shop.productOrCategory.index', $product->url_key) }}" title="{{ $product->name }}">
+                    <a href="{{ route('shop.productOrCategory.index', empty($product->url_key)?$product->name:$product->url_key) }}" title="{{ $product->name }}">
                         <img src="{{ $productBaseImage['medium_image_url'] }}" alt="" />
                     </a>
                 </div>
 
                 <div class="product-name mt-20">
-                    <a href="{{ route('shop.productOrCategory.index', $product->url_key) }}" title="{{ $product->name }}">
+                    <a href="{{ route('shop.productOrCategory.index', empty($product->url_key)?$product->name:$product->url_key) }}" title="{{ $product->name }}">
                         <span>{{ $product->name }}</span>
                     </a>
                 </div>

@@ -58,7 +58,7 @@
             <div class="product-image">
                 <a
                     title="{{ $product->name }}"
-                    href="{{ route('shop.productOrCategory.index', $product->url_key) }}">
+                    href="{{ route('shop.productOrCategory.index', empty($product->url_key)?$product->name:$product->url_key) }}">
 
                     <img
                         src="{{ $productBaseImage['medium_image_url'] }}"
@@ -73,7 +73,7 @@
                 <div>
                     <div class="product-name">
                         <a
-                            href="{{ route('shop.productOrCategory.index', $product->url_key) }}"
+                            href="{{ route('shop.productOrCategory.index', empty($product->url_key)?$product->name:$product->url_key) }}"
                             title="{{ $product->name }}" class="unset">
 
                             <span class="fs16">{{ $product->name }}</span>
@@ -118,7 +118,7 @@
     @else
         <div class="card grid-card product-card-new">
             <a
-                href="{{ route('shop.productOrCategory.index', $product->url_key) }}"
+                href="{{ route('shop.productOrCategory.index', empty($product->url_key)?$product->name:$product->url_key) }}"
                 title="{{ $product->name }}"
                 class="product-image-container">
 
@@ -142,7 +142,7 @@
             <div class="card-body">
                 <div class="product-name col-12 no-padding">
                     <a
-                        href="{{ route('shop.productOrCategory.index', $product->url_key) }}"
+                        href="{{ route('shop.productOrCategory.index', empty($product->url_key)?$product->name:$product->url_key) }}"
                         title="{{ $product->name }}"
                         class="unset">
 

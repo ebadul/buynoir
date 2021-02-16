@@ -45,7 +45,7 @@
                             </span>
 
                             @if (core()->getConfigData('catalog.products.review.guest_review') || auth()->guard('customer')->check())
-                                <a href="{{ route('shop.reviews.create', ['slug' => $product->url_key ]) }}">
+                                <a href="{{ route('shop.reviews.create', ['slug' => empty($product->url_key)?$product->name:$product->url_key ]) }}">
                                     <button type="button" class="theme-btn light">{{ __('velocity::app.products.write-your-review') }}</button>
                                 </a>
                             @endif
@@ -89,7 +89,7 @@
                         </span>
 
                         @if (core()->getConfigData('catalog.products.review.guest_review') || auth()->guard('customer')->check())
-                            <a href="{{ route('shop.reviews.create', ['slug' => $product->url_key ]) }}">
+                            <a href="{{ route('shop.reviews.create', ['slug' => empty($product->url_key)?$product->name:$product->url_key ]) }}">
                                 <button type="button" class="theme-btn light">{{ __('velocity::app.products.write-your-review') }}</button>
                             </a>
                         @endif
@@ -154,7 +154,7 @@
                     @endforeach
 
                     <a
-                        href="{{ route('shop.reviews.index', ['slug' => $product->url_key ]) }}"
+                        href="{{ route('shop.reviews.index', ['slug' => empty($product->url_key)?$product->name:$product->url_key ]) }}"
                         class="mb20 link-color"
                     >{{ __('velocity::app.products.view-all-reviews') }}</a>
                 </div>
@@ -198,7 +198,7 @@
     @else
         @if (core()->getConfigData('catalog.products.review.guest_review') || auth()->guard('customer')->check())
             <div class="customer-rating" style="border: none">
-                <a href="{{ route('shop.reviews.create', ['slug' => $product->url_key ]) }}">
+                <a href="{{ route('shop.reviews.create', ['slug' => empty($product->url_key)?$product->name:$product->url_key ]) }}">
                     <button type="button" class="theme-btn light">{{ __('velocity::app.products.write-your-review') }}</button>
                 </a>
             </div>

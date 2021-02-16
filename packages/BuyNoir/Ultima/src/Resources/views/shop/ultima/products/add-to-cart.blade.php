@@ -11,7 +11,7 @@
                     customer="false"
                 @endif
 
-                slug="{{ $product->url_key }}"
+                slug="{{ empty($product->url_key)?$product->name:$product->url_key }}"
                 product-id="{{ $product->id }}"
             ></compare-component>
         @endif
