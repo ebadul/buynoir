@@ -29,7 +29,7 @@
 @endphp
 
 {!! view_render_event('bagisto.shop.products.list.card.before', ['product' => $product]) !!}
-    @if (isset($list) && $list)
+    @if (isset($list) && $list && !empty($product))
         <div class="col-12 lg-card-container list-card product-card row">
             <div class="product-image">
                 <a
@@ -75,7 +75,7 @@
                 </div>
             </div>
         </div>
-    @else
+    @elseif(!empty($product))
         <div class="card grid-card product-card-new col-lg-4">
             <a
                 href="{{ route('shop.productOrCategory.index', empty($product->url_key)?'':$product->url_key) }}"
