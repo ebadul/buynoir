@@ -1,6 +1,6 @@
 <?php
 
-Route::group(['middleware' => ['web', 'admin_locale']], function () {
+Route::group(['middleware' => ['web']], function () {
     Route::prefix(config('app.admin_url'))->group(function () {
 
         Route::get('/', 'Webkul\Admin\Http\Controllers\Controller@redirectToLogin');
@@ -37,6 +37,7 @@ Route::group(['middleware' => ['web', 'admin_locale']], function () {
             Route::get('/logout', 'Webkul\User\Http\Controllers\SessionController@destroy')->defaults('_config', [
                 'redirect' => 'admin.session.create',
             ])->name('admin.session.destroy');
+            
 
             // Dashboard Route
             Route::get('dashboard', 'Webkul\Admin\Http\Controllers\DashboardController@index')->defaults('_config', [
@@ -335,13 +336,6 @@ Route::group(['middleware' => ['web', 'admin_locale']], function () {
 
                 Route::post('/categories/delete/{id}', 'Webkul\Category\Http\Controllers\CategoryController@destroy')->name('admin.catalog.categories.delete');
 
-                //category massdelete
-                Route::post('categories/massdelete', 'Webkul\Category\Http\Controllers\CategoryController@massDestroy')->defaults('_config', [
-                    'redirect' => 'admin.catalog.categories.index',
-                ])->name('admin.catalog.categories.massdelete');
-
-                Route::post('/categories/product/count', 'Webkul\Category\Http\Controllers\CategoryController@categoryProductCount')->name('admin.catalog.categories.product.count');
-                
 
                 // Catalog Attribute Routes
                 Route::get('/attributes', 'Webkul\Attribute\Http\Controllers\AttributeController@index')->defaults('_config', [
@@ -577,9 +571,16 @@ Route::group(['middleware' => ['web', 'admin_locale']], function () {
 
 
             // Admin Profile route
-            Route::get('/account', 'Webkul\User\Http\Controllers\AccountController@edit')->defaults('_config', [
+            Route::get('/account-edit', 'Webkul\User\Http\Controllers\AccountController@edit')->defaults('_config', [
                 'view' => 'admin::account.edit',
             ])->name('admin.account.edit');
+
+            Route::get('/account-index', 'Webkul\User\Http\Controllers\AccountController@edit')->defaults('_config', [
+                'view' => 'admin::account.edit',
+            ])->name('company.profile.index');
+            Route::get('/account-address', 'Webkul\User\Http\Controllers\AccountController@edit')->defaults('_config', [
+                'view' => 'admin::account.edit',
+            ])->name('company.address.index');
 
             Route::put('/account', 'Webkul\User\Http\Controllers\AccountController@update')->name('admin.account.update');
 

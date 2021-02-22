@@ -34,6 +34,20 @@ use BuyNoir\SuperFront\Http\Controllers\Controller;
         return view($this->_config['view']);
     }
 
+    public function privacyPolicy()
+    {
+        // $currentChannel = company()->getCurrentChannel();
+        // $sliderData = $this->sliderRepository->findByField('channel_id', $currentChannel->id)->toArray();
+        return view($this->_config['view']);
+    }
+
+    public function contactUs()
+    {
+        // $currentChannel = company()->getCurrentChannel();
+        // $sliderData = $this->sliderRepository->findByField('channel_id', $currentChannel->id)->toArray();
+        return view($this->_config['view']);
+    }
+
     /**
      * loads the home page for the storefront
      */

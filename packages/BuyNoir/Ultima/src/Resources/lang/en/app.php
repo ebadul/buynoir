@@ -1,14 +1,14 @@
 <?php
 
 return [
-    'admin' => [
-        'meta-data' => [
-            'top-ribbon'                    => 'Top ribbon',
-            'bottom-ribbon'                 => 'Bottom ribbon',
-            'title'                         => 'Ultima Theme',
-            'advertisement-four-content'    => 'Advertisement four content'
-        ],
-    ],
+    // 'admin' => [
+    //     'meta-data' => [
+    //         'top-ribbon'                    => 'Top ribbon',
+    //         'bottom-ribbon'                 => 'Bottom ribbon',
+    //         'title'                         => 'Ultima Theme',
+    //         'advertisement-four-content'    => 'Advertisement four content'
+    //     ],
+    // ],
 
     'admin'         => [
         'system'    => [
@@ -120,7 +120,11 @@ return [
             'advertisement-three'       => 'Advertisement Three Images',
             'images'                    => 'Images',
             'general'                   => 'General',
-            'add-image-btn-title'       => 'Add Image'
+            'add-image-btn-title'       => 'Add Image',
+            'top-ribbon'                    => 'Top ribbon',
+            'bottom-ribbon'                 => 'Bottom ribbon',
+            'title'                         => 'Ultima Theme',
+            'advertisement-four-content'    => 'Advertisement four content'
         ],
         'category'  => [
             'save-btn-title' => 'Save Menu',

@@ -5,10 +5,16 @@
         Route::get('/index', 'BuyNoir\SuperFront\Http\Controllers\SuperFrontController@index')
         ->defaults('_config', ['view' => 'superfront_view::superfront.index'])
         ->name('buynoir.home.index');
+        Route::get('/privacy-policy', 'BuyNoir\SuperFront\Http\Controllers\SuperFrontController@privacyPolicy')
+        ->defaults('_config', ['view' => 'superfront_view::superfront.privacy-policy'])
+        ->name('buynoir.home.privacypolicy');
+        Route::get('/contact-us', 'BuyNoir\SuperFront\Http\Controllers\SuperFrontController@contactUs')
+        ->defaults('_config', ['view' => 'superfront_view::superfront.contact-us'])
+        ->name('buynoir.home.contactus');
 
     Route::group(['middleware' => ['web', 'company-locale']], function () {
         
-    
+
 
         // Route::any('/index', 'BuyNoir\SuperFront\Http\Controllers\SuperFrontController@index')
         //             ->defaults('_config', ['view' => 'superfront_view::superfront.shop-index'])

@@ -69,7 +69,7 @@
                 this.isStateChanged = true;
 
                 this.setStorageValue('wishlist_product', updatedValue);
-
+				this.buttonClicked(updatedValue);
                 window.showAlert(
                     'alert-success',
                     this.__('shop.general.alert.success'),
@@ -91,7 +91,12 @@
                 } else {
                     return false;
                 }
-            }
+            },
+			
+			buttonClicked: function (updatedValue) {
+			  this.$root.$emit('wishlistEvent', updatedValue);			 
+			}
+			
         }
     }
 </script>

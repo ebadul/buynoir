@@ -77,12 +77,12 @@
 
                             <div class="text-center">
                                 <div class="mb-2">
-                                    <button class="btn text-uppercase" type="submit">
+                                    <button class="btn text-uppercase buynoir-btn" type="submit">
                                         {{ __('Login') }}
                                     </button>
                                 </div>
                                 <a href="{{ route('customer.forgot-password.create') }}" class="accent-link">
-                                    {{ __('Forgotten your password?') }}
+                                    {{ __('Forgot your password?') }}
                                 </a>
                             </div>
                         </form>

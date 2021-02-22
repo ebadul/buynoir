@@ -62,9 +62,9 @@
 
             <flash-wrapper ref='flashes'></flash-wrapper>
 
-            @if( request()->is('index') )
+            {{-- @if( request()->is('index') ) --}}
             @include ('superfront_view::superfront.nav-top')
-            @endif
+            {{-- @endif --}}
 
 
 
@@ -83,9 +83,9 @@
             
             {!! view_render_event('bagisto.saas.companies.layout.footer.before') !!}
 
-            @if( request()->is('index') )
+            {{-- @if( request()->is('index') ) --}}
                 @include('superfront_view::superfront.footer')
-            @endif
+            {{-- @endif --}}
             
             {!! view_render_event('bagisto.saas.companies.layout.footer.after') !!}
             

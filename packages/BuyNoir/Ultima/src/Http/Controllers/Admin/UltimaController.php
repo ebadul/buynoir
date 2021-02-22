@@ -148,7 +148,7 @@ class UltimaController extends Controller
                 foreach ($advertisement as $key => $image_array) {
                     if (! isset($params['images'][$key])) {
                         foreach ($advertisement[$key] as $image) {
-                            Storage::delete($image);
+                            \Storage::delete($image);
                         }
                     }
                 }
@@ -242,7 +242,7 @@ class UltimaController extends Controller
 
         if (isset($advertisement[$index]) && $advertisement[$index]) {
             foreach ($advertisement[$index] as $imageId) {
-                Storage::delete($imageId);
+                \Storage::delete($imageId);
             }
         }
 

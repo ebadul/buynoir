@@ -169,6 +169,7 @@
                             }
 
                             $advertisement = json_decode($metaData->get('advertisement')->all()[$index]->advertisement, true);
+                            
                         @endphp
 
                         @if(! isset($advertisement[4]) || ! count($advertisement[4]))

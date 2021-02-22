@@ -27,7 +27,7 @@ return [
             'views_path' => 'resources/themes/ultima/views',
             'assets_path' => 'public/themes/ultima/assets',
             'name' => 'Ultima',
-            'parent' => 'default'
+            'parent' => 'Velocity'
         ],
     ],
 

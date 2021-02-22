@@ -434,7 +434,7 @@ class Bundle extends AbstractType
         if ($prices['from']['regular_price']['price'] != $prices['to']['regular_price']['price']
             || $prices['from']['final_price']['price'] != $prices['to']['final_price']['price']
         ) {
-            $priceHtml .= '<span class="bundle-to">To</span>';
+            $priceHtml .= '<span class="bundle-to"> To </span>';
 
             if ($prices['to']['regular_price']['price'] != $prices['to']['final_price']['price']) {
                 $priceHtml .= '<span class="bundle-regular-price">' . $prices['to']['regular_price']['formated_price'] . '</span>'

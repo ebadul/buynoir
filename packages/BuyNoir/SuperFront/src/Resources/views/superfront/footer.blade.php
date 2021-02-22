@@ -19,8 +19,8 @@
             </a>
           </div>
           <div class="other--links">
-            <a href="#">Support</a>
-            <a href="#">Privacy Policy</a>
+            <a href="{{route("buynoir.home.contactus")}}">Support</a>
+            <a href="{{route("buynoir.home.privacypolicy")}}">Privacy Policy</a>
             <a href="#">Cookie Policy</a>
           </div>
           <div class="opyright">
@@ -125,13 +125,16 @@
   <!-- End. Toasts -->
 
   <!-- Start Section Loader -->
-  <section class="loading_overlay">
-    <div class="loader_logo">
-      <!-- <img class="logo" src="assets/img/logo.svg" /> -->
-      <span class="logo">Made in ATL!</span>
-    </div>
-  </section>
-  <!-- End. Loader -->
+    @if( request()->is('index') )
+      <section class="loading_overlay">
+        <div class="loader_logo">
+          <!-- <img class="logo" src="assets/img/logo.svg" /> -->
+          <span class="logo">Made in ATL!</span>
+        </div>
+      </section>
+    @endif
+      <!-- End. Loader -->
+ 
 
  
   <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css">

@@ -19,7 +19,8 @@
                 </a>
                 <slot name="login"></slot>
             </li>
-            <li class="nav-item text-center">
+                    
+			<li class="nav-item text-center">
                 <a
                     class="nav-link"
                     :href="
@@ -30,7 +31,9 @@
                 >
                     <i class="nav-link-image ei-heart_alt"></i>
                     <span>Wishlist</span>
-                    <span class="number-bubble" v-if="numWishlisted">{{ numWishlisted }}</span>
+                    <span class="number-bubble" v-if="numWishlisted">
+						{{ numWishlisted }}
+					</span>
                 </a>
             </li>
             <li class="nav-item text-center position-relative">
@@ -60,10 +63,18 @@
                 numWishlisted: 0
             };
         },
-        mounted() {
+        mounted(){
+			 
             this.numWishlisted = this.getStorageValue("wishlist_product")
                 ? this.getStorageValue("wishlist_product").length
                 : 0;
+			 
+				this.$root.$on('wishlistEvent', (wishlists) => { 
+				  this.numWishlisted = this.getStorageValue("wishlist_product")
+					? this.getStorageValue("wishlist_product").length
+					: 0;
+				});
+				
         },
         methods: {
             closeSearch() {

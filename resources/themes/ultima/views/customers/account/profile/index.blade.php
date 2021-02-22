@@ -98,10 +98,14 @@
                 <i class="rango-close"></i>
 
                 <div slot="body">
-                    <div class="control-group" :class="[errors.has('password') ? 'has-error' : '']">
-                        <label for="password" class="required">{{ __('admin::app.users.users.password') }}</label>
-                        <input type="password" v-validate="'required|min:6|max:18'" class="control" id="password" name="password" data-vv-as="&quot;{{ __('admin::app.users.users.password') }}&quot;"/>
-                        <span class="control-error" v-if="errors.has('password')">@{{ errors.first('password') }}</span>
+                    <div class="row">
+						<div class="col-5">
+							<div class="control-group" :class="[errors.has('password') ? 'has-error' : '']">
+								<!--<label for="password" class="required">{{ __('admin::app.users.users.password') }}</label>-->
+								<input type="password" v-validate="'required|min:6|max:18'" class="control" id="password" name="password" data-vv-as="&quot;{{ __('admin::app.users.users.password') }}&quot;"/>
+								<span class="control-error" v-if="errors.has('password')">@{{ errors.first('password') }}</span>
+							</div>
+						</div>
                     </div>
 
                     <div class="page-action">

@@ -22,13 +22,13 @@
 
                 <div class="error-messgae" style="font-size: 16px; color: #242424; margin-top: 40px;">
                     {!! __('saas::app.tenant.custom-errors.domain-message', [
-                        'domain' => $_SERVER['SERVER_NAME']
+                        'domain' => empty($_SERVER['SERVER_NAME'])?"": $_SERVER['SERVER_NAME']
                     ]) !!}.
                 </div>
 
                 <div class="error-description" style="margin-top: 20px; margin-bottom: 20px; color: #242424">
                     {!! __('saas::app.tenant.custom-errors.domain-desc', [
-                        'domain' => $_SERVER['SERVER_NAME']
+                        'domain' => empty($_SERVER['SERVER_NAME'])?"": $_SERVER['SERVER_NAME']
                     ]) !!}
 
                     <br/>

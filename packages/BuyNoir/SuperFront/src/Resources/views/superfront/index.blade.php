@@ -417,7 +417,11 @@
                     <button type="button"
                       class="btn mt-3 rounded-12 sweep_top sweep_letter btn_md_primary c-white scale bg-green2">
                       <div class="inside_item">
-                        <span data-hover="Contact Us">Contact Us</span>
+                        <a href="{{route("buynoir.home.contactus")}}" alt="BuyNoir Contact Us">
+                          <span data-hover="Contact Us">
+                              Contact Us
+                          </span>
+                        </a>
                       </div>
                     </button>
                   </div>

@@ -33,7 +33,7 @@
 
                                 <div class="fs18 card-current-price text-left">
                                     <div class="d-flex justify-content-between">
-                                        <label class="text-secondary">{{ __('checkout.qty') }}</label>
+                                        <label class="text-nowrap">{{ __('checkout.qty') }}</label>
                                         <span>{{ item.quantity }}</span>
                                     </div>
                                 </div>
