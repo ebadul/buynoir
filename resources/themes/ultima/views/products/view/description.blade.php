@@ -8,3 +8,4 @@
     </div>
 
 {!! view_render_event('bagisto.shop.products.view.description.after', ['product' => $product]) !!}
+{!! view_render_event('bagisto.shop.products.view.short_description.after', ['product' => $product]) !!}

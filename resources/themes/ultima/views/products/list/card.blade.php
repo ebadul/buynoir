@@ -29,13 +29,13 @@
 @endphp
 
 {!! view_render_event('bagisto.shop.products.list.card.before', ['product' => $product]) !!}
-    @if (isset($list) && $list && !empty($product))
+    @if (isset($list) && $list)
         <div class="col-12 lg-card-container list-card product-card row">
             <div class="product-image">
                 <a
                     title="{{ $product->name }}"
-                    href="{{ route('shop.productOrCategory.index', empty($product->url_key)?'':$product->url_key) }}">
-  
+                    href="{{ route('shop.productOrCategory.index', $product->url_key) }}">
+
                     <img
                         src="{{ $productBaseImage['medium_image_url'] }}"
                         :onerror="`this.src='${this.$root.baseUrl}/vendor/webkul/ui/assets/images/product/large-product-placeholder.png'`" />
@@ -46,7 +46,7 @@
                 <div>
                     <div class="product-name">
                         <a
-                            href="{{ route('shop.productOrCategory.index', empty($product->url_key)?'':$product->url_key) }}"
+                            href="{{ route('shop.productOrCategory.index', $product->url_key) }}"
                             title="{{ $product->name }}" class="unset">
 
                             <span class="product-name-title">{{ $product->name }}</span>
@@ -66,6 +66,11 @@
 
                     <div class="cart-wish-wrap mt5">
                         @include ('shop::products.add-to-cart', [
+							'showCompare'       => true,
+							'btnText'           => $btnText ?? null,
+							'moveToCart'        => $moveToCart ?? null,
+							'reloadPage'        => $reloadPage ?? null,
+							'addToCartForm'     => $addToCartForm ?? false,
                             'product' => $product,
                             'showCompare' => true,
                             'addWishlistClass' => 'pl10',
@@ -75,10 +80,10 @@
                 </div>
             </div>
         </div>
-    @elseif(!empty($product))
+    @else
         <div class="card grid-card product-card-new col-lg-4">
             <a
-                href="{{ route('shop.productOrCategory.index', empty($product->url_key)?'':$product->url_key) }}"
+                href="{{ route('shop.productOrCategory.index', $product->url_key) }}"
                 title="{{ $product->name }}"
                 class="product-image-container">
 
@@ -95,9 +100,10 @@
             <div class="card-body">
                 <div class="product-name col-12 px-0">
                     <a
-                        href="{{ route('shop.productOrCategory.index', empty($product->url_key)?'':$product->url_key) }}"
+                        href="{{ route('shop.productOrCategory.index', $product->url_key) }}"
                         title="{{ $product->name }}"
                         class="unset">
+
                         <span class="fs16">{{ $product->name }}</span>
                     </a>
                 </div>

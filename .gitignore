@@ -25,3 +25,4 @@ package-lock.json
 /vendor
 yarn.lock
 yarn-error.log
+packages/BuyNoir/Ultima/node_modules/.bin/regjsparser.cmd

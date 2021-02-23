@@ -40,7 +40,7 @@
 
                         {!! view_render_event('bagisto.shop.customers.forget_password_form_controls.before') !!}
 
-                        <div class="control-group" :class="[errors.has('email') ? 'has-error' : '']">
+                        <div class="control-group buynoir-ultima" :class="[errors.has('email') ? 'has-error' : '']">
                             <label for="email" class="mandatory label-style">
                                 {{ __('shop::app.customer.forgot-password.email') }}
                             </label>

@@ -9,7 +9,7 @@
         <meta name="csrf-token" content="{{ csrf_token() }}">
         <meta http-equiv="content-language" content="{{ app()->getLocale() }}">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        @if ($favicon = core()->getCurrentChannel()->favicon_url)
+		@if ($favicon = core()->getCurrentChannel()->favicon_url)
             <link rel="icon" sizes="16x16" href="{{ $favicon }}" />
         @else
             <link rel="icon" sizes="16x16" href="{{ asset('/themes/ultima/assets/images/static/v-icon.png') }}" />
@@ -23,7 +23,7 @@
 
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" />
 
-       
+        
 
         <script
             type="text/javascript"

@@ -16,7 +16,7 @@
             </div>
             <category-links :header-content="{{ json_encode($velocityContent) }}"></category-links>
         </div>
-        <div class="small-col text-right" >
+        <div class="small-col text-right" style="max-width:25%;flex:0 0 25%">
             @include('ultima::layouts.header.link-section')
         </div>
     </div>

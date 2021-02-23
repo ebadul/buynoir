@@ -31,7 +31,7 @@
                 <div class="text-right" v-if="products.length > 0">
                     <button
                         class="btn btn-outline text-uppercase"
-                        @click="removeProduct('all')"> 
+                        @click="removeProduct('all')">
                         {{ __('shop::app.customer.account.wishlist.deleteall') }}
                     </button>
                 </div>
@@ -124,12 +124,14 @@
 
                     this.$root.headerItemsCount++;
                     this.setStorageValue('wishlist_product', updatedItems);
-
+					
                     window.showAlert(
                         `alert-success`,
                         this.__('shop.general.alert.success'),
-                        `${this.__('customer.compare.removed')}`
+                        `${this.__('customer.wishlist.remove-all-success')}`
                     );
+					
+					this.$root.$emit('wishlistEvent', updatedItems);
                 }
             }
         });

@@ -161,7 +161,7 @@
                                                   <div class="control-group" :class="[errors.has('step-two.phone_no') ? 'has-error' : '']">
                                                       {{-- <label for="phone_no" class="required">{{ __('saas::app.tenant.registration.phone') }}</label> --}}
 
-                                                      <input type="text" class="control" name="phone_no" v-model="phone_no" placeholder="Phone Number" v-validate="'required'" data-vv-as="&quot;{{ __('saas::app.tenant.registration.phone') }}&quot;">
+                                                      <input type="text" class="control" pattern="[-+]?\d*" name="phone_no" v-model="phone_no" placeholder="Phone Number" v-validate="'required|numeric'" data-vv-as="&quot;{{ __('saas::app.tenant.registration.phone') }}&quot;">
 
                                                       <span class="control-error" v-show="errors.has('step-two.phone_no')">@{{ errors.first('step-two.phone_no') }}</span>
                                                   </div>
@@ -348,7 +348,7 @@
                                           catchResponseThree () {
                                               this.createdclicked = true;
                                               var o_this = this;
-                                              var storeNameTmp = this.username.replace(' ',''); 
+                                              var storeNameTmp = this.username.split(' ').join(''); 
                                               console.log("store name::", storeNameTmp)
                                               axios.post('{{ route('company.validate.step-three') }}', {
                                                   username: storeNameTmp,
@@ -370,7 +370,7 @@
 
                                           sendDataToServer () {
                                               var o_this = this;
-                                              var usernameTm = this.username.replace(' ','');
+                                              var usernameTm = this.username.split(' ').join(''); 
                                               return axios.post('{{ route('company.create.store') }}', {
                                                   email: this.email,
                                                   first_name: this.first_name,

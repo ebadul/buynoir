@@ -267,7 +267,7 @@ Route::group(['middleware' => 'web'], function () {
                 ])->name('company.profile.index');
     
                 Route::post('/profile', 'Webkul\SAASCustomizer\Http\Controllers\Admin\CompanyProfileController@update')->defaults('_config', [
-                    'redirect' => 'company.profile.index'
+                    'view' => 'saas::admin.address.index'
                 ])->name('company.profile.update');
     
                 Route::get('/address', 'Webkul\SAASCustomizer\Http\Controllers\Admin\CompanyAddressController@index')->defaults('_config', [

@@ -577,7 +577,7 @@ Route::group(['middleware' => ['web']], function () {
 
             Route::get('/account-index', 'Webkul\User\Http\Controllers\AccountController@edit')->defaults('_config', [
                 'view' => 'admin::account.edit',
-            ])->name('company.profile.index');
+            ])->name('company.profile.accountindex');
             Route::get('/account-address', 'Webkul\User\Http\Controllers\AccountController@edit')->defaults('_config', [
                 'view' => 'admin::account.edit',
             ])->name('company.address.index');

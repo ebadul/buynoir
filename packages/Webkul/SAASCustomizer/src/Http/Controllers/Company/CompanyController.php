@@ -247,7 +247,7 @@ class CompanyController extends Controller
         );
 
         $validator = Validator::make(request()->all(), [
-            'username' => 'required|alpha_num|min:3|max:64|unique:companies,username',
+            'username' => 'required|min:3|max:64|unique:companies,username',
             //'name' => 'required|string|max:191|unique:companies,name'
         ]);
 

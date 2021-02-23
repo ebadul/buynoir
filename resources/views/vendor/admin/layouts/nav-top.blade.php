@@ -1,4 +1,4 @@
-<div class="navbar-top buynoir-navbar layouts">
+<div class="navbar-top buynoir-navbar subscription">
     {{--  <div class="navbar-top-left">
         <div class="brand-logo">
             <a href="{{ route('admin.dashboard.index') }}">
@@ -10,7 +10,6 @@
             </a>
         </div>
     </div>  --}}
-
     <div class="navbar-top-left"> 
         <div class="search-bar"> 
             <i class="icon search-icon"></i> 
