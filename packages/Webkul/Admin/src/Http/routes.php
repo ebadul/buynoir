@@ -580,7 +580,7 @@ Route::group(['middleware' => ['web']], function () {
             ])->name('company.profile.accountindex');
             Route::get('/account-address', 'Webkul\User\Http\Controllers\AccountController@edit')->defaults('_config', [
                 'view' => 'admin::account.edit',
-            ])->name('company.address.index');
+            ])->name('company.address.addressindex');
 
             Route::put('/account', 'Webkul\User\Http\Controllers\AccountController@update')->name('admin.account.update');
 

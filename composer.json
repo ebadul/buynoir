@@ -111,11 +111,11 @@
             "Webkul\\BookingProduct\\": "packages/Webkul/BookingProduct/src",
             "Webkul\\SocialLogin\\": "packages/Webkul/SocialLogin/src",
             "Webkul\\DebugBar\\": "packages/Webkul/DebugBar/src",
-            "Webkul\\SAASCustomizer\\": "packages/Webkul/SAASCustomizer/src",
             "Webkul\\SAASSubscription\\": "packages/Webkul/SAASSubscription/src",
             "BuyNoir\\SuperFront\\": "packages/BuyNoir/SuperFront/src",
-            "BuyNoir\\Ultima\\": "packages/BuyNoir/Ultima/src",
+            "Webkul\\SAASCustomizer\\": "packages/Webkul/SAASCustomizer/src",
             "Webkul\\StripeConnect\\": "packages/Webkul/StripeConnect/src"
+
         }
     },
 

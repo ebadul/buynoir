@@ -1,1 +1,0 @@
-<link rel="stylesheet" href="{{ asset('themes/ultima/assets/css/ultima.css') }}">
