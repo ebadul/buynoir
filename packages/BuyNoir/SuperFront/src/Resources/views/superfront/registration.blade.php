@@ -180,11 +180,14 @@
 
                                                     <select class="control" name="productcategory" v-model="productcategory" v-validate="'required'" >
                                                         <option value="" selected>{{ __('saas::app.tenant.registration.org-name') }}</option>
-                                                        <option value="Cloths">Cloths</option>
-                                                        <option value="Shoes">Shoes</option>
-                                                        <option value="Jwellary">Jwellary</option>
-                                                        <option value="Books">Books</option>
-                                                        <option value="Glossary">Glossary</option>
+                                                        <option value="Clothing">Clothing</option>
+                                                        <option value="CBD Products">CBD Products</option>
+                                                        <option value="Food and Beverage">Food and Beverage</option>
+                                                        <option value="Health and Beauty">Health and Beauty</option>
+                                                        <option value="Home Decor">Home Decor</option>
+                                                        <option value="Jewelry">Jewelry</option>
+                                                        <option value="Services">Services</option>
+                                                        <option value="Other Goods">Other Goods</option>
                                                         <option value="Others">Others</option>
                                                     </select>
                                                     <span class="control-error" v-show="errors.has('step-three.productcategory')">@{{ errors.first('step-three.productcategory') }}</span>

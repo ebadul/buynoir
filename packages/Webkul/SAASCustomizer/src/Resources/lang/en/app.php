@@ -310,7 +310,7 @@ return [
             'org-name'              => 'What do you sell?',
             'else-business'         => 'Are you just starting? Or are you moving your business from elsewhere?',
             'just-start'            => 'Just starting',
-            'else-moving'           => 'Already established and moving my staff here',
+            'else-moving'           => 'Already established and moving my stuff here',
             'company-activated'     => 'Success: Company successfully activated.',
             'company-deactivated'   => 'Success: Company successfully deactivated.',
             'company-updated'       => 'Success: Company Updated Successfully.',
