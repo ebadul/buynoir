@@ -29,4 +29,5 @@ yarn.lock
 yarn-error.log
 packages/BuyNoir/Ultima/node_modules/.bin/regjsparser.cmd
 app/Http/Kernel.php
+packages/BuyNoir/Ultima
 

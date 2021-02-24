@@ -57,182 +57,193 @@
                      
                   <div class="row ">
                     <div class="col-12 text-right pt-3">
-                        <a href="{{config('app.url')}}" class="btn outline btn-lg"><i class="icon cross-icon"></i></a>
+                      <a href={{config('app.url')}} class='btn outline btn-lg' id="regisCloseLink" ><i class='icon cross-icon'></i></a>
                     </div>
-                    {{--  <div class="col-md-4 col-lg-4">
-                      <div class="fixed_side_data">
-                        <div class="head_nav">
-                          <a href="{{route('buynoir.home.index')}}" class="btn btn_logo">
-                            <!-- <img src="assets/img/logo.svg" /> -->
-                            BuyNoir<span class="c-blue">.</span>
-                          </a> 
-                        </div>
-                      </div>
-                    </div>  --}}
+                    
                     <div class="col-md-8 col-lg-8 mx-auto">
                           <seller-registration></seller-registration>
 
                           @push('scripts')
                               <script type="text/x-template" id="seller-registration">
                                   <div class="company-content" id="buynoir-shop-registration">
-                                      <div class="form-container" style="border:none">
+                                      <div class="form-container" v-bind:style=" step_four ? 'margin-top: -30px;border: none;' : 'border: none;' ">
                                         <div class="head_nav">
 
                                             <div class="brand-logo">
                                                 <a href="{{ route('buynoir.home.index') }}" class="btn btn_logo">
-                                                  
                                                         <img src="{{ asset('vendor/webkul/ui/assets/images/logo.png') }}" alt="{{ config('app.name') }}"/>
-                                                  
                                                 </a>
                                             </div>
 
                                           </div>
 
-                                          <div class="step-navigator">
-                                              
-                                          </div>
-                                         
+                                        <form class="registration" data-vv-scope="step-one" v-if="step_one" @submit.prevent="validateForm('step-one')">
+                                        
 
-                                          <form class="registration" data-vv-scope="step-one" v-if="step_one" @submit.prevent="validateForm('step-one')">
-                                            
-
-                                              <div class="step-navigator">
-                                                <div class='registration-subtitle'>Launch your online business now.<br/>
-                                                   Free for 10 days</div>
-                                             </div>
+                                            <div class="step-navigator">
+                                            <div class='registration-subtitle'>Launch your online business now.<br/>
+                                                Free for 10 days</div>
+                                            </div>
 
 
-                                              <div class="control-group" :class="[errors.has('step-one.email') ? 'has-error' : '']">
-                                                  {{-- <label for="email" class="required">{{ __('saas::app.tenant.registration.email') }}</label> --}}
+                                            <div class="control-group" :class="[errors.has('step-one.email') ? 'has-error' : '']">
+                                                {{-- <label for="email" class="required">{{ __('saas::app.tenant.registration.email') }}</label> --}}
 
-                                                  <input type="text" v-validate="'required|email|max:191'" class="control" v-model="email" name="email" data-vv-as="&quot;{{ __('saas::app.tenant.registration.email') }}&quot;" placeholder="Email Address">
+                                                <input type="text" v-validate="'required|email|max:191'" class="control" v-model="email" name="email" data-vv-as="&quot;{{ __('saas::app.tenant.registration.email') }}&quot;" placeholder="Email Address">
 
-                                                  <span class="control-error" v-show="errors.has('step-one.email')">@{{ errors.first('step-one.email') }}</span>
-                                              </div>
+                                                <span class="control-error" v-show="errors.has('step-one.email')">@{{ errors.first('step-one.email') }}</span>
+                                            </div>
 
-                                              <div class="control-group" :class="[errors.has('step-one.password') ? 'has-error' : '']">
-                                                  {{-- <label for="password" class="required">{{ __('saas::app.tenant.registration.password') }}</label> --}}
+                                            <div class="control-group" :class="[errors.has('step-one.password') ? 'has-error' : '']">
+                                                {{-- <label for="password" class="required">{{ __('saas::app.tenant.registration.password') }}</label> --}}
 
-                                                  <input type="password" name="password" v-validate="'required|min:6'" ref="password" class="control" v-model="password" placeholder="Password" data-vv-as="&quot;{{ __('saas::app.tenant.registration.password') }}&quot;">
+                                                <input type="password" name="password" v-validate="'required|min:6'" ref="password" class="control" v-model="password" placeholder="Password" data-vv-as="&quot;{{ __('saas::app.tenant.registration.password') }}&quot;">
 
-                                                  <span class="control-error" v-show="errors.has('step-one.password')">@{{ errors.first('step-one.password') }}</span>
-                                              </div>
+                                                <span class="control-error" v-show="errors.has('step-one.password')">@{{ errors.first('step-one.password') }}</span>
+                                            </div>
 
-                                              <div class="control-group" :class="[errors.has('step-one.password_confirmation') ? 'has-error' : '']">
-                                                  {{-- <label for="password_confirmation" class="required">{{ __('saas::app.tenant.registration.cpassword') }}</label> --}}
+                                            <div class="control-group" :class="[errors.has('step-one.password_confirmation') ? 'has-error' : '']">
+                                                {{-- <label for="password_confirmation" class="required">{{ __('saas::app.tenant.registration.cpassword') }}</label> --}}
 
-                                                  <input type="password" v-validate="'required|min:6|confirmed:password'" class="control" v-model="password_confirmation" name="password_confirmation" placeholder="Confirm Password" data-vv-as="&quot;{{ __('saas::app.tenant.registration.cpassword') }}&quot;">
+                                                <input type="password" v-validate="'required|min:6|confirmed:password'" class="control" v-model="password_confirmation" name="password_confirmation" placeholder="Confirm Password" data-vv-as="&quot;{{ __('saas::app.tenant.registration.cpassword') }}&quot;">
 
-                                                  <span class="control-error" v-show="errors.has('step-one.password_confirmation')">@{{ errors.first('step-one.password_confirmation') }}</span>
-                                              </div>
+                                                <span class="control-error" v-show="errors.has('step-one.password_confirmation')">@{{ errors.first('step-one.password_confirmation') }}</span>
+                                            </div>
 
-                                              <div class="control-group text-right">
-                                                  <!-- <input type="submit" class="btn btn-lg btn-primary" :disabled="errors.has('password') || errors.has('password_confirmation') || errors.has('email')"  value="Continue"> -->
-                                                  <button class="btn btn-lg btn-warning registration-btn" :disabled="errors.has('step-one.password') || errors.has('step-one.password_confirmation') || errors.has('step-one.email')">{{ __('saas::app.tenant.registration.continue') }}</button>
-                                              </div>
-                                          </form>
+                                            <div class="control-group text-right">
+                                                <!-- <input type="submit" class="btn btn-lg btn-primary" :disabled="errors.has('password') || errors.has('password_confirmation') || errors.has('email')"  value="Continue"> -->
+                                                <button class="btn btn-lg btn-warning registration-btn" :disabled="errors.has('step-one.password') || errors.has('step-one.password_confirmation') || errors.has('step-one.email')">{{ __('saas::app.tenant.registration.continue') }}</button>
+                                            </div>
+                                        </form>
 
-                                          <form class="registration" @submit.prevent="validateForm('step-two')" data-vv-scope="step-two" v-show="step_two">
-                                              <div class="step-two">
-                                                  {{-- <h3 class="mb-30">{{ __('saas::app.tenant.registration.step-2') }}:</h3>
+                                        <form class="registration" @submit.prevent="validateForm('step-two')" data-vv-scope="step-two" v-show="step_two">
+                                            <div class="step-two">
+                                                {{-- <h3 class="mb-30">{{ __('saas::app.tenant.registration.step-2') }}:</h3>
 
-                                                  <h4>{{ __('saas::app.tenant.registration.personal') }}</h4> --}}
+                                                <h4>{{ __('saas::app.tenant.registration.personal') }}</h4> --}}
 
-                                                  <div class="step-navigator">
-                                                    <div class='registration-subtitle'>Tell us about you</div>
-                                                 </div>
+                                                <div class="step-navigator">
+                                                <div class='registration-subtitle'>Tell us about you</div>
+                                                </div>
 
-                                                  <div class="control-group" :class="[errors.has('step-two.first_name') ? 'has-error' : '']" >
-                                                      {{-- <label for="first_name" class="required">{{ __('saas::app.tenant.registration.first-name') }}</label> --}}
+                                                <div class="control-group" :class="[errors.has('step-two.first_name') ? 'has-error' : '']" >
+                                                    {{-- <label for="first_name" class="required">{{ __('saas::app.tenant.registration.first-name') }}</label> --}}
 
-                                                      <input type="text" class="control" v-model="first_name" name="first_name" placeholder="First Name" v-validate="'required|alpha_spaces'" data-vv-as="&quot;{{ __('saas::app.tenant.registration.first-name') }}&quot;">
+                                                    <input type="text" class="control" v-model="first_name" name="first_name" placeholder="First Name" v-validate="'required|alpha_spaces'" data-vv-as="&quot;{{ __('saas::app.tenant.registration.first-name') }}&quot;">
 
-                                                      <span class="control-error" v-show="errors.has('step-two.first_name')">@{{ errors.first('step-two.first_name') }}</span>
-                                                  </div>
+                                                    <span class="control-error" v-show="errors.has('step-two.first_name')">@{{ errors.first('step-two.first_name') }}</span>
+                                                </div>
 
-                                                  <div class="control-group" :class="[errors.has('step-two.last_name') ? 'has-error' : '']">
-                                                      {{-- <label for="last_name">{{ __('saas::app.tenant.registration.last-name') }}</label> --}}
+                                                <div class="control-group" :class="[errors.has('step-two.last_name') ? 'has-error' : '']">
+                                                    {{-- <label for="last_name">{{ __('saas::app.tenant.registration.last-name') }}</label> --}}
 
-                                                      <input type="text" class="control" name="last_name" v-model="last_name" placeholder="{{ __('saas::app.tenant.registration.last-name') }}" v-validate="'alpha_spaces'" data-vv-as="&quot;{{ __('saas::app.tenant.registration.first-name') }}&quot;">
+                                                    <input type="text" class="control" name="last_name" v-model="last_name" placeholder="{{ __('saas::app.tenant.registration.last-name') }}" v-validate="'alpha_spaces'" data-vv-as="&quot;{{ __('saas::app.tenant.registration.first-name') }}&quot;">
 
-                                                      <span class="control-error" v-show="errors.has('step-two.last_name')">@{{ errors.first('step-two.last_name') }}</span>
-                                                  </div>
+                                                    <span class="control-error" v-show="errors.has('step-two.last_name')">@{{ errors.first('step-two.last_name') }}</span>
+                                                </div>
 
-                                                  <div class="control-group" :class="[errors.has('step-two.phone_no') ? 'has-error' : '']">
-                                                      {{-- <label for="phone_no" class="required">{{ __('saas::app.tenant.registration.phone') }}</label> --}}
+                                                <div class="control-group" :class="[errors.has('step-two.phone_no') ? 'has-error' : '']">
+                                                    {{-- <label for="phone_no" class="required">{{ __('saas::app.tenant.registration.phone') }}</label> --}}
 
-                                                      <input type="text" class="control" pattern="[-+]?\d*" name="phone_no" v-model="phone_no" placeholder="Phone Number" v-validate="'required|numeric'" data-vv-as="&quot;{{ __('saas::app.tenant.registration.phone') }}&quot;">
+                                                    <input type="text" class="control" pattern="[-+]?\d*" name="phone_no" v-model="phone_no" placeholder="Phone Number" v-validate="'required|numeric'" data-vv-as="&quot;{{ __('saas::app.tenant.registration.phone') }}&quot;">
 
-                                                      <span class="control-error" v-show="errors.has('step-two.phone_no')">@{{ errors.first('step-two.phone_no') }}</span>
-                                                  </div>
+                                                    <span class="control-error" v-show="errors.has('step-two.phone_no')">@{{ errors.first('step-two.phone_no') }}</span>
+                                                </div>
 
-                                                  <div class="control-group text-right">
-                                                      <button class="btn btn-lg btn-warning registration-btn" :disabled="errors.has('first_name') || errors.has('last_name') || errors.has('step-two.phone_no')">{{ __('saas::app.tenant.registration.next') }}</button>
-                                                  </div>
-                                              </div>
-                                          </form>
+                                                <div class="control-group text-right">
+                                                    <button class="btn btn-lg btn-warning registration-btn" :disabled="errors.has('first_name') || errors.has('last_name') || errors.has('step-two.phone_no')">{{ __('saas::app.tenant.registration.next') }}</button>
+                                                </div>
+                                            </div>
+                                        </form>
 
-                                          <form class="registration" @submit.prevent="validateForm('step-three')" data-vv-scope="step-three" v-show="step_three">
-                                              <div class="step-three">
-                                                  {{-- <h3 class="mb-30">{{ __('saas::app.tenant.registration.step-3') }}:</h3>
+                                        <form class="registration" @submit.prevent="validateForm('step-three')" data-vv-scope="step-three" v-show="step_three">
+                                            <div class="step-three">
+                                                {{-- <h3 class="mb-30">{{ __('saas::app.tenant.registration.step-3') }}:</h3>
 
-                                                  <h4>{{ __('saas::app.tenant.registration.org-details') }}:</h4> --}}
+                                                <h4>{{ __('saas::app.tenant.registration.org-details') }}:</h4> --}}
 
-                                                  <div class="step-navigator">
-                                                    <div class='registration-subtitle'>Last step<br>
-                                                        ok, let's talk about your store
+                                                <div class="step-navigator">
+                                                <div class='registration-subtitle'>Last step<br>
+                                                    ok, let's talk about your store
+                                                </div>
+                                                </div>
+
+                                                <div class="control-group" :class="[errors.has('step-three.username') ? 'has-error' : '']">
+                                                    {{-- <label for="username" class="required">User Name</label> --}}
+
+                                                    <input type="text" class="control" name="username" v-model="username" placeholder="{{ __('saas::app.tenant.registration.username') }}" v-validate="'required|alpha_spaces'" data-vv-as="&quot;{{ __('saas::app.tenant.registration.username') }}&quot;">
+
+                                                    <span class="control-error" v-show="errors.has('step-three.username')">@{{ errors.first('step-three.username') }}</span>
+                                                </div>
+
+                                                <div class="control-group" :class="[errors.has('step-three.productcategory') ? 'has-error' : '']">
+
+                                                    <select class="control" name="productcategory" v-model="productcategory" v-validate="'required'" >
+                                                        <option value="" selected>{{ __('saas::app.tenant.registration.org-name') }}</option>
+                                                        <option value="Cloths">Cloths</option>
+                                                        <option value="Shoes">Shoes</option>
+                                                        <option value="Jwellary">Jwellary</option>
+                                                        <option value="Books">Books</option>
+                                                        <option value="Glossary">Glossary</option>
+                                                        <option value="Others">Others</option>
+                                                    </select>
+                                                    <span class="control-error" v-show="errors.has('step-three.productcategory')">@{{ errors.first('step-three.productcategory') }}</span>
+                                                </div>
+
+                                                <div class="control-group mt-4" :class="[errors.has('step-three.name') ? 'has-error' : '']">
+                                                    <label for="elsebusiness" class="">{{ __('saas::app.tenant.registration.else-business') }}</label>
+                                                    <div class="row mt-3">
+                                                    <div class="col-md-4">
+                                                        <label style="color:#aa5352;">
+                                                            <input type="radio" class="" id="elsebusinessStart" name="elsebusiness" v-model="elsebusinessStart" value="START"  v-validate="''" data-vv-as="&quot;{{ __('saas::app.tenant.registration.else-business') }}&quot;">
+                                                            {{ __('saas::app.tenant.registration.just-start') }}
+                                                        </label>
                                                     </div>
-                                                 </div>
+                                                    <div class="col-md-8">
+                                                        <label style="color:#aa5352;">
+                                                            <input type="radio" class="" id="elsebusinessMoving" name="elsebusiness" v-model="elsebusinessStart" value="MOVING" v-validate="''" data-vv-as="&quot;{{ __('saas::app.tenant.registration.else-business') }}&quot;">
+                                                            {{ __('saas::app.tenant.registration.else-moving') }}
+                                                        </label>
+                                                    </div>
+                                                    </div>
 
-                                                  <div class="control-group" :class="[errors.has('step-three.username') ? 'has-error' : '']">
-                                                      {{-- <label for="username" class="required">User Name</label> --}}
+                                                </div>
 
-                                                      <input type="text" class="control" name="username" v-model="username" placeholder="{{ __('saas::app.tenant.registration.username') }}" v-validate="'required|alpha_spaces'" data-vv-as="&quot;{{ __('saas::app.tenant.registration.username') }}&quot;">
+                                                <div class="control-group text-right">
+                                                    <button class="btn btn-lg btn-warning registration-btn" :disabled="errors.has('step-three.username') || errors.has('step-three.name') || createdclicked" style="font-size:18px">{{ __('saas::app.tenant.registration.create-store') }}</button>
+                                                </div>
+                                            </div>
+                                        </form>
 
-                                                      <span class="control-error" v-show="errors.has('step-three.username')">@{{ errors.first('step-three.username') }}</span>
-                                                  </div>
+                                        <form class="registration" data-vv-scope="step-four" v-show="step_four" id="formStepFour">
+                                            <div class="step-three" style="margin-top:-25px">
+                                                <div class="step-navigator">
+                                                    <div class='registration-subtitle'>
+                                                        <p>{{ __('saas::app.tenant.registration.congrats-title') }}</p> 
+                                                        {{ __('saas::app.tenant.registration.congrats-subtitle') }}
+                                                    </div>
+                                                    <p class="text-center mt-4">{{ __('saas::app.tenant.registration.congrats-description') }}</p>
+                                                </div>
 
-                                                  <div class="control-group" :class="[errors.has('step-three.productcategory') ? 'has-error' : '']">
+                                                <div class="control-group text-center" :class="[errors.has('step-three.username') ? 'has-error' : '']">
+                                                    <img src="{{ asset('buynoir/superfront/assets/img/congrats.gif') }}" alt="{{ config('app.name') }}" style="height:50vh"/>
+                                                </div>
 
-                                                      <select class="control" name="productcategory" v-model="productcategory" v-validate="'required'" >
-                                                            <option value="" selected>{{ __('saas::app.tenant.registration.org-name') }}</option>
-                                                            <option value="Cloths">Cloths</option>
-                                                            <option value="Shoes">Shoes</option>
-                                                            <option value="Jwellary">Jwellary</option>
-                                                            <option value="Books">Books</option>
-                                                            <option value="Glossary">Glossary</option>
-                                                            <option value="Others">Others</option>
-                                                      </select>
-                                                      <span class="control-error" v-show="errors.has('step-three.productcategory')">@{{ errors.first('step-three.productcategory') }}</span>
-                                                  </div>
-
-                                                  <div class="control-group mt-4" :class="[errors.has('step-three.name') ? 'has-error' : '']">
-                                                      <label for="elsebusiness" class="">{{ __('saas::app.tenant.registration.else-business') }}</label>
-                                                      <div class="row mt-3">
-                                                        <div class="col-md-4">
-                                                            <label style="color:#aa5352;">
-                                                                <input type="radio" class="" id="elsebusinessStart" name="elsebusiness" v-model="elsebusinessStart" value="START"  v-validate="''" data-vv-as="&quot;{{ __('saas::app.tenant.registration.else-business') }}&quot;">
-                                                                {{ __('saas::app.tenant.registration.just-start') }}
-                                                            </label>
-                                                        </div>
-                                                        <div class="col-md-8">
-                                                            <label style="color:#aa5352;">
-                                                                <input type="radio" class="" id="elsebusinessMoving" name="elsebusiness" v-model="elsebusinessStart" value="MOVING" v-validate="''" data-vv-as="&quot;{{ __('saas::app.tenant.registration.else-business') }}&quot;">
-                                                                {{ __('saas::app.tenant.registration.else-moving') }}
-                                                            </label>
-                                                        </div>
-                                                      </div>
-
-                                                  </div>
-
-                                                  <div class="control-group text-right">
-                                                      <button class="btn btn-lg btn-warning registration-btn" :disabled="errors.has('step-three.username') || errors.has('step-three.name') || createdclicked" style="font-size:18px">{{ __('saas::app.tenant.registration.create-store') }}</button>
-                                                  </div>
-                                              </div>
+                                            
+                                                <div class="row text-center" style="display:none">
+                                                    <div class="col-6">
+                                                        <a v-bind:href="redirectUrlShop" class="btn btn-lg btn-warning registration-btn" id="btn-congrts" style="font-size:18px">{{ __('saas::app.tenant.registration.visit-shop') }}</a>
+                                                    </div>
+                                                    <div class="col-6">
+                                                        <a v-bind:href="redirectUrlAdmin" class="btn btn-lg btn-warning registration-btn" style="font-size:18px">{{ __('saas::app.tenant.registration.login-admin') }}</a>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </form>
 
 
-                                        <ul class="step-list registration-ul">
+
+                                        <ul class="step-list registration-ul mt-3" v-bind:style="step_four?'display:none':''">
                                             <li class="registration-step-item" :class="{ active: isOneActive }" v-on:click="stepNav(1)"></li>
                                             <li class="registration-step-item" :class="{ active: isTwoActive }" v-on:click="stepNav(2)"></li>
                                             <li class="registration-step-item" :class="{ active: isThreeActive }" v-on:click="stepNav(3)"></li>
@@ -246,7 +257,7 @@
                                   
                                   var vDate = new Date();
                                   var nDigit = "BuyNoir-"+vDate.getTime();
-                                  Vue.component('seller-registration', {
+                                  var registration = Vue.component('seller-registration', {
                                       template: '#seller-registration',
                                       inject: ['$validator'],
                                       data: () => ({
@@ -254,6 +265,7 @@
                                           step_one: true,
                                           step_two: false,
                                           step_three: false,
+                                          step_four: false,
                                           email: null,
                                           password: null,
                                           password_confirmation: null,
@@ -269,7 +281,9 @@
                                           result: [],
                                           isOneActive: false,
                                           isTwoActive: false,
-                                          isThreeActive: false
+                                          isThreeActive: false,
+                                          redirectUrlShop:"./",
+                                          redirectUrlAdmin:"./admin"
                                       }),
 
                                       mounted() {
@@ -383,7 +397,23 @@
                                                   username: usernameTm,
                                                   elsebusinessStart: this.elsebusinessStart
                                               }).then(function (response) {
-                                                  window.location.href = response.data.redirect;
+                                                //   window.location.href = response.data.redirect;
+                                                document.getElementById("regisCloseLink").style.display="none";
+                                                o_this.step_one   = false;
+                                                o_this.step_two   = false;
+                                                o_this.step_three = false;
+                                                o_this.step_four  = true;
+                                                
+
+                                                //this.redirectUrlShop = response.data.redirectShop;
+                                                //this.redirectUrlAdmin = response.data.redirectAdmin;
+                                                setTimeout(function(){
+                                                    console.log("success registration");
+                                                    //this.step_four = false;
+                                                    window.location.href = response.data.redirect;
+                                                },5000);
+                                               
+                                                
                                               }).catch(function (errors) {
                                                   serverErrors = errors.response.data.errors;
 

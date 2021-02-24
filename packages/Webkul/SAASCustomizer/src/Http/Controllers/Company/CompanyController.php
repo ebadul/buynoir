@@ -196,15 +196,20 @@ class CompanyController extends Controller
             $company_domain = isset($data['url']) ? $data['url'] : $data['domain'];
 
             $seed_url = 'http://' . $company_domain . '/company/seed-data';
+            $company_url = "";
             if (str_contains(config('app.url'), 'http://')) {
                 $seed_url = 'http://' . $company_domain . '/company/seed-data';
+                $company_url = 'http://' . $company_domain ;
             } elseif (str_contains(config('app.url'), 'https://')) {
                 $seed_url = 'https://' . $company_domain . '/company/seed-data';
+                $company_url = 'https://' . $company_domain ;
             }
             
             return response()->json([
                 'success'   => true,
-                'redirect'  => $seed_url
+                'redirect'  => $seed_url,
+                'redirectUrlShop'  => $company_url ,
+                'redirectUrlAdmin'  => $company_url .'/admin',
             ], 200);
         } else {
             return response()->json([

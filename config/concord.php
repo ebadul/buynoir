@@ -39,7 +39,7 @@ return [
         \Webkul\Velocity\Providers\ModuleServiceProvider::class,
         \Webkul\SAASCustomizer\Providers\ModuleServiceProvider::class,
         \Webkul\SAASSubscription\Providers\ModuleServiceProvider::class,
-        \BuyNoir\Ultima\Providers\ModuleServiceProvider::class,
-        \Webkul\StripeConnect\Providers\ModuleServiceProvider::class
+        \Webkul\StripeConnect\Providers\ModuleServiceProvider::class,
+        // \BuyNoir\Ultima\Providers\ModuleServiceProvider::class,
     ]
 ];

@@ -16,7 +16,7 @@
     <form
         method="POST"
         @submit.prevent="onSubmit"
-        action="{{ route('customer.profile.store') }}">
+        action="{{ route('customer.profile.store') }}" class="col-md-6 col-sm-6">
 
         <div class="account-table-content">
             @csrf

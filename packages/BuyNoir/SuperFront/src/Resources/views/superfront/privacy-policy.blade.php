@@ -60,7 +60,7 @@
                   <div class="col-md-12 col-lg-8 mt-5">
                     <div class="title_sections mt-5">
                       <div class="before_title">
-                        <span class="c-green2">On the Privacy Page, enter this code snippet to have the policy displayed</span>
+                        
                       </div>
 
                       <!-- Termly Tracking Code -->
