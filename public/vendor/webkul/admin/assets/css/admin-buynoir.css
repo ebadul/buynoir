@@ -18,6 +18,8 @@ body {
     background-color: #000;
     color: #fff;
     width: 33.33%;
+    display: inline-block;
+    vertical-align: middle;
 }
 
 .buynoir-navbar .navbar-top-right .profile-info span.name,
@@ -216,13 +218,14 @@ body {
 /*** admin login ****/
 
 div.center-box {
-    background: #fdf4f0;
+    background: #fff;
 }
 
 #buynoir-panel-login {
     box-shadow: none;
-    background: #fae3da;
+    background: #fdf4f0;
     border: 1px solid #aa5352;
+    border-radius: 0px;
 }
 
 #buynoir-panel-login .btn-primary {
@@ -254,4 +257,21 @@ div.center-box {
 
 .buynoir-dashboard-container .dashboard-stats .dashboard-card .data {
     color: #622231;
+}
+
+.buynoir-dashboard-container .dashboard .card {
+    box-shadow: none;
+}
+
+.buynoir-navbar-left li.active {
+    background-color: #fdf4f0;
+}
+
+.buynoir-form-login label {
+    font-size: 25px;
+    color: #efa;
+}
+
+#buynoir-panel-login input:-internal-autofill-selected {
+    background-color: #fff;
 }

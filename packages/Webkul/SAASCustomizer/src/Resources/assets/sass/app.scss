@@ -1,9 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:400,500");
-
 // Icon scss
 @import "icons";
 @import "variables";
-
 html {
     font-family: "montserrat", sans-serif;
 }
@@ -47,20 +45,18 @@ body.super-section {
         margin-top: 100px;
         border: 1px solid $border-color;
         box-shadow: 1px 1px 1px $border-color;
-
         .logo {
             align-content: center;
             justify-content: center;
             margin-bottom: 30px;
         }
-
         .sign-in {
             button {
                 margin-left: calc(50% - 45px);
             }
         }
-
-        .forgot-password, .reset-password {
+        .forgot-password,
+        .reset-password {
             button {
                 margin-left: calc(39% - 90px);
             }
@@ -72,7 +68,6 @@ body.super-section {
     .content-wrapper {
         background-color: $form-bg;
     }
-
     .content {
         .page-header {
             background-color: $form-bg;
@@ -91,22 +86,21 @@ body.super-section {
     // margin-right: auto;
     // padding: 20px;
     // background-color: $form-bg;
-
     .brand-logo {
         display: flex;
         align-items: center;
         justify-content: center;
         width: 100%;
     }
-
-    .step-one, .step-two, .step-three {
+    .step-one,
+    .step-two,
+    .step-three {
         button {
             width: 150px;
             margin-left: calc(50% - 75px);
         }
     }
 }
-
 
 .registration {
     .control-group .control {
@@ -125,7 +119,6 @@ body.super-section {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-
     .step-item {
         cursor: pointer;
         height: 64px;
@@ -135,7 +128,6 @@ body.super-section {
         text-align: center;
         padding-top: 24px;
     }
-
     .step-item.active {
         border: 1px solid blue;
     }
@@ -156,4 +148,8 @@ body.super-section {
 
 .customer-options {
     height: auto !important;
+}
+
+.saascustomizer {
+    display: flex;
 }

@@ -1,4 +1,4 @@
-<div class="navbar-top buynoir-navbar saascustomizer">
+<div class="navbar-top buynoir-navbar saascustomizer buynoir-navbar">
 
     {{--  <div class="navbar-top-left">
         <div class="brand-logo">
@@ -13,7 +13,7 @@
     </div>  --}}
 
 
-    <div class="navbar-top-left"> 
+    <div class="navbar-top-left buynoir-navbar"> 
         <div class="search-bar"> 
             <i class="icon search-icon"></i> 
             <input type="text" class="form-control"> 
