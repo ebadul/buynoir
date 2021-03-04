@@ -1,4 +1,4 @@
-<div class="navbar-top buynoir-navbar saascustomizer buynoir-navbar">
+<div class="navbar-top buynoir-navbar saascustomizer buynoir-navbar" style="display:flex">
 
     {{--  <div class="navbar-top-left">
         <div class="brand-logo">
